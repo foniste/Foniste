@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "V4eZ+IoJak2UwXhlqgraFx/+8GAMxfkdr9nifPsyO4cgs9LuRNv1nvFot/F71WmHKcq0q+QqtUp4u4ao4I7W0g==",
+  "dgSpecHash": "uBZFmpGdxJRGCPz6QUf09Q/sE1M6y7R/zpoVtJ0RCBbzF+miYYHDW9T0IHzWulmnQJujbzPs9le08OAjAINlDg==",
   "success": true,
   "projectFilePath": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\melih\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\melih\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\melih\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\melih\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512"
+  ],
   "logs": []
 }
