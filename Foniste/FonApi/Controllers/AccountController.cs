@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using System.Text;
 using FonApi.Database;
 using FonApi.Models.Accounts;
 using FonApi.Service;
@@ -75,5 +77,25 @@ namespace FonApi.Controllers
         // ! Email bazlı user varmı yok mu kontrol sonu //
 
         // * KAYIT EKRANI METODLARI SONU //
+
+
+        // * GİRİŞ EKRANI METODLARI BAŞLANGICI //
+
+        // ! Email ve Şifre Kullanarak Login Methodu Başlangıcı //
+        [HttpPost("/current/user")]
+        public async Task<IActionResult> LoginByEmailPassword([FromBody] UserAuth currentUserAuth){
+            var control = _accountDbService.Login( //Bu methodda email ve şifre parametreleri bazlı kontrol yapılıyor 
+                currentUserAuth.Email,
+                _accountDbService.HashSHA256(currentUserAuth.Password)
+            );
+
+            if(!control){
+                return Ok("Böyle bir kullanıcı bulunamadı!");
+            }
+            return Ok("Giriş Başarılı");
+        }
+        // ! Email ve Şifre Kullanarak Login Methodu Son //
+        
+        // * GİRİŞ EKRANI METODLARI SONU //
     }
 }
