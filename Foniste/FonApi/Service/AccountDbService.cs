@@ -1,4 +1,6 @@
-﻿using FonApi.Database;
+﻿using System.Security.Cryptography;
+using System.Text;
+using FonApi.Database;
 using FonApi.Interfaces;
 using FonApi.Models.Accounts;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +40,7 @@ namespace FonApi.Service {
         public async Task<List<UserAuth>> GetAllUserAuthenticationData(){
             return await _accountsDbContext.user_auth.ToListAsync();
         }
+        //
 
         //Kayıt olurken aynı email ile kaydedilmiş bir user var mı kontrolü yapan method
         public bool IsExistsInUserDb(string email){
@@ -60,6 +63,35 @@ namespace FonApi.Service {
             {
                 throw;
             }
+        }
+        //
+
+        // Login methodu
+        public bool Login(string email,string password){
+            var temp = _accountsDbContext
+                        .user_auth
+                        .Where(c => c.Email == email && c.Password == password)
+                        .ToList();
+
+            if(temp.Count == 0) {
+                return false;
+            }
+            return true;
+        }
+        //
+
+        //Sha-256 şifreleme metodu
+        public string HashSHA256(string input)
+        {
+            SHA256 sha256 = SHA256.Create();
+            
+            byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+            byte[] hashBytes = sha256.ComputeHash(inputBytes);
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < hashBytes.Length; i++) {
+                stringBuilder.Append(hashBytes[i].ToString("x2"));
+            }
+            return stringBuilder.ToString();
         }
         //
 
