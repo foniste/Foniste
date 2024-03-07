@@ -49,6 +49,7 @@ namespace FonApi.Service {
         }
         //
 
+        //Kayıt olma işlemini tamamlamak için tabloya insert atma metodu
         public void InsertNewUser(UserAuth userAuth){
             try
             {
@@ -60,6 +61,7 @@ namespace FonApi.Service {
                 throw;
             }
         }
+        //
 
         // ?---------------------------------------------------------------------------------//
         // ?---------------------------------------------------------------------------------//
