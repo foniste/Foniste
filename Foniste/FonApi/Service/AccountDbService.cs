@@ -37,8 +37,21 @@ namespace FonApi.Service {
         // ?---------------------------------------------------------------------------------//
 
         // Tüm kullancıların auth datasını getiren method
-        public async Task<List<UserAuth>> GetAllUserAuthenticationData(){
-            return await _accountsDbContext.user_auth.ToListAsync();
+        public int GetUserIdByEmail(string email,string password){
+            try {
+                int holder = _accountsDbContext.user_auth
+                .Where(user => user.Email == email)
+                .Select(user => user.UserId).FirstOrDefault();
+
+                if(holder == null){
+                    return 0;
+                }
+                
+                return holder;
+            }
+            catch (System.Exception) {
+                throw;
+            }
         }
         //
 

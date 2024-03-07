@@ -7,7 +7,7 @@ namespace FonApi.Interfaces{
         Task<List<LoginLog>> GetAllLog();
         Task<List<Organizations>> GetAllOrganization();
         Task<List<Role>> GetAllRole();
-        Task<List<UserAuth>> GetAllUserAuthenticationData();
+        int GetUserIdByEmail(string email,string password);
         bool IsExistsInUserDb(string email);
     }
 }
