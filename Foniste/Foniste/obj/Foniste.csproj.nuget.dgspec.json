@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj": {}
+    "c:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj": {}
   },
   "projects": {
-    "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj": {
+    "c:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj",
+        "projectUniqueName": "c:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj",
         "projectName": "Foniste",
-        "projectPath": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj",
+        "projectPath": "c:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj",
         "packagesPath": "C:\\Users\\melih\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\obj\\",
+        "outputPath": "c:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\melih\\AppData\\Roaming\\NuGet\\NuGet.Config"

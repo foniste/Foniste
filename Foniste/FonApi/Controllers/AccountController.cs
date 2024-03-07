@@ -13,8 +13,6 @@ namespace FonApi.Controllers
     public class AccountController : ControllerBase {
         //Error Messages 
         private const string newUserIsNullException = "An error occurred while trying to register. Please try again.";
-        private const string registeredUserException = "This user has already been registered.";
-        private const string registrationSucceeded = "Registered";
         //
         private readonly AccountDbService _accountDbService;
 
@@ -87,9 +85,18 @@ namespace FonApi.Controllers
             );
 
             if(!control){
-                return Ok("Böyle bir kullanıcı bulunamadı!");
+                return Ok("Kullanıcı id si alınamadı");
             }
-            return Ok("Giriş Başarılı");
+            else{
+                var temp = _accountDbService.GetUserIdByEmail(
+                currentUserAuth.Email,
+                _accountDbService.HashSHA256(currentUserAuth.Password)
+                );
+                if(temp == 0){
+                    return Ok("Id alınırken bir sorun oluştu.");
+                }
+                return Ok("Giriş Başarılı \n" + "Kullanıcı id si :" + temp);
+            }
         }
         // ! Email ve Şifre Kullanarak Login Methodu Son //
         
