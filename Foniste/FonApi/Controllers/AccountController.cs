@@ -1,6 +1,3 @@
-using System.Security.Cryptography;
-using System.Text;
-using FonApi.Database;
 using FonApi.Models.Accounts;
 using FonApi.Service;
 using Microsoft.AspNetCore.Mvc;
