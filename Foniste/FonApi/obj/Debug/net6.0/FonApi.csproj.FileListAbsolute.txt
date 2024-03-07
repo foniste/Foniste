@@ -24,9 +24,15 @@ C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\staticwebassets.pack.json
 C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\staticwebassets.build.json
 C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\staticwebassets.development.json
 C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\scopedcss\bundle\FonApi.styles.css
-C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\FonApi.csproj.CopyComplete
 C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\FonApi.dll
 C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\refint\FonApi.dll
 C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\FonApi.pdb
 C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\FonApi.genruntimeconfig.cache
 C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\ref\FonApi.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\FonApi.sourcelink.json
+C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\FonApi.csproj.Up2Date
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\MySqlConnector.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
