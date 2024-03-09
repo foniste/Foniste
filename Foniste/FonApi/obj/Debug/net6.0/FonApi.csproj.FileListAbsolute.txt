@@ -36,3 +36,11 @@ C:\GitHubRepo\Foniste\Foniste\FonApi\obj\Debug\net6.0\FonApi.csproj.Up2Date
 C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\MySqlConnector.dll
 C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\GitHubRepo\Foniste\Foniste\FonApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

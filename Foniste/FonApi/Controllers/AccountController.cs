@@ -15,15 +15,17 @@ namespace FonApi.Controllers
         private const string newUserIsNullException = "An error occurred while trying to register. Please try again.";
         //
         private readonly AccountDbService _accountDbService;
+        //private readonly JwtService _jwtService;
 
         //Constructor
         public AccountController(AccountDbService accountDbService){
             _accountDbService = accountDbService ?? throw new ArgumentNullException(nameof(accountDbService));
+            //_jwtService = jwtService ?? throw new ArgumentNullException(nameof(jwtService));
         }
         //
 
         //* KAYIT EKRANI METODLARI BAŞLANGICI //
-
+        //
         // ! Kayıt olma ekranı için method başlangıcı //
         [HttpPost("/new/usr")]
         public async Task<IActionResult> CreateNewUser([FromBody] UserAuth newUser) {
@@ -46,7 +48,7 @@ namespace FonApi.Controllers
                 case "Unavailable": // Insert atabilmek için şart sağlanmadı, zaten kaydedilmiş bir hesap var 
                     return Ok("Hesap Oluşturulamaz");
                 default:
-                    return BadRequest("FonIste");
+                    return BadRequest("Hata!");
             }
 
         }
@@ -75,7 +77,6 @@ namespace FonApi.Controllers
 
 
         // * GİRİŞ EKRANI METODLARI BAŞLANGICI //
-
         // ! Email ve Şifre Kullanarak Login Methodu Başlangıcı //
         [HttpPost("/current/user")]
         public async Task<IActionResult> LoginByEmailPassword([FromBody] UserAuth currentUserAuth){
@@ -95,7 +96,7 @@ namespace FonApi.Controllers
                 if(temp == 0){
                     return Ok("Id alınırken bir sorun oluştu.");
                 }
-                return Ok("Giriş Başarılı \n" + "Kullanıcı id si :" + temp);
+                return Ok("Giriş Başarılı \n" + "Kullanıcı id si :" + temp); //+ <_jwtService.GenerateToken(temp,currentUserAuth.Email));
             }
         }
         // ! Email ve Şifre Kullanarak Login Methodu Son //

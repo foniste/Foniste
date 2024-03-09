@@ -8,12 +8,25 @@
     ".NETCoreApp,Version=v6.0": {
       "FonApi/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.4",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.0",
-          "Swashbuckle.AspNetCore": "6.5.0"
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "System.IdentityModel.Tokens.Jwt": "7.4.0"
         },
         "runtime": {
           "FonApi.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.4": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "assemblyVersion": "6.0.4.0",
+            "fileVersion": "6.0.422.17204"
+          }
         }
       },
       "Microsoft.EntityFrameworkCore/6.0.0": {
@@ -102,6 +115,71 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
+      "Microsoft.IdentityModel.Abstractions/7.4.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "assemblyVersion": "7.4.0.0",
+            "fileVersion": "7.4.0.50226"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/7.4.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "7.4.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "assemblyVersion": "7.4.0.0",
+            "fileVersion": "7.4.0.50226"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/7.4.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "7.4.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Logging.dll": {
+            "assemblyVersion": "7.4.0.0",
+            "fileVersion": "7.4.0.50226"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Protocols/6.10.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.4.0",
+          "Microsoft.IdentityModel.Tokens": "7.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": {
+            "assemblyVersion": "6.10.0.0",
+            "fileVersion": "6.10.0.20330"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect/6.10.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols": "6.10.0",
+          "System.IdentityModel.Tokens.Jwt": "7.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
+            "assemblyVersion": "6.10.0.0",
+            "fileVersion": "6.10.0.20330"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/7.4.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.4.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Tokens.dll": {
+            "assemblyVersion": "7.4.0.0",
+            "fileVersion": "7.4.0.50226"
+          }
+        }
+      },
       "Microsoft.OpenApi/1.2.3": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -179,6 +257,18 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
+      "System.IdentityModel.Tokens.Jwt/7.4.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "7.4.0",
+          "Microsoft.IdentityModel.Tokens": "7.4.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.IdentityModel.Tokens.Jwt.dll": {
+            "assemblyVersion": "7.4.0.0",
+            "fileVersion": "7.4.0.50226"
+          }
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {}
     }
   },
@@ -187,6 +277,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-joDS3+lD1i9qcdFLWP4D316t3bHpezmTNOzbMIf9ZcRPX4QTuiUutZcQn/kZplf3BiLHqwUChZXxPjCAMKaKAQ==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.4",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.4.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/6.0.0": {
       "type": "package",
@@ -286,6 +383,48 @@
       "path": "microsoft.extensions.primitives/6.0.0",
       "hashPath": "microsoft.extensions.primitives.6.0.0.nupkg.sha512"
     },
+    "Microsoft.IdentityModel.Abstractions/7.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y5wvSoKT6G9gi94FmTwyMCRDjMBVwCnDTXT9yyy95jS3lq3IRXJ/Fh+tqmsluA181RzAtXgK5SsvGGkcWm2n0g==",
+      "path": "microsoft.identitymodel.abstractions/7.4.0",
+      "hashPath": "microsoft.identitymodel.abstractions.7.4.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/7.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8Gxy/KSjzEXg4hEyMvR0EsuLpaYLERoX1grIxechhoS8ugUyVvX9zxhMUg0EC/Oi3slhQ+rWrvN6M/M26RnRLQ==",
+      "path": "microsoft.identitymodel.jsonwebtokens/7.4.0",
+      "hashPath": "microsoft.identitymodel.jsonwebtokens.7.4.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Logging/7.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TuCWnlQprih0PieviKAdvHtjuVLUjEBymEUlBqAe8BUBWlMjB7eHaZ1pi5mkPR5bbrVWLYu8/qiMVc0+neE6dQ==",
+      "path": "microsoft.identitymodel.logging/7.4.0",
+      "hashPath": "microsoft.identitymodel.logging.7.4.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Protocols/6.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DFyXD0xylP+DknCT3hzJ7q/Q5qRNu0hO/gCU90O0ATdR0twZmlcuY9RNYaaDofXKVbzcShYNCFCGle2G/o8mkg==",
+      "path": "microsoft.identitymodel.protocols/6.10.0",
+      "hashPath": "microsoft.identitymodel.protocols.6.10.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Protocols.OpenIdConnect/6.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LVvMXAWPbPeEWTylDrxunlHH2wFyE4Mv0L4gZrJHC4HTESbWHquKZb/y/S8jgiQEDycOP0PDQvbG4RR/tr2TVQ==",
+      "path": "microsoft.identitymodel.protocols.openidconnect/6.10.0",
+      "hashPath": "microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Tokens/7.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2GXnFtFNv51QaIFw7pC3+OSRG+wDxj53MY6o6DRFFp/wAsTUTeasN+7Gkc6zSuI4cbrU9KXSVzs2cnW6EQ5szg==",
+      "path": "microsoft.identitymodel.tokens/7.4.0",
+      "hashPath": "microsoft.identitymodel.tokens.7.4.0.nupkg.sha512"
+    },
     "Microsoft.OpenApi/1.2.3": {
       "type": "package",
       "serviceable": true,
@@ -348,6 +487,13 @@
       "sha512": "sha512-frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
       "path": "system.diagnostics.diagnosticsource/6.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512"
+    },
+    "System.IdentityModel.Tokens.Jwt/7.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9XayJBAY+Bs7+ISFJ6BXJuCf6q9DyP8rsn/D1uNaKHDLyADjeKLRDa5YbFRfSBo/+8cuMzlD2VIUR4VuAPoK7w==",
+      "path": "system.identitymodel.tokens.jwt/7.4.0",
+      "hashPath": "system.identitymodel.tokens.jwt.7.4.0.nupkg.sha512"
     },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",

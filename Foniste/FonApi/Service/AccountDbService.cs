@@ -13,7 +13,6 @@ namespace FonApi.Service {
         public AccountDbService(AccountsDbContext accountsDbContext) {
             _accountsDbContext = accountsDbContext ?? throw new ArgumentNullException(nameof(accountsDbContext));
             //_accountsDbContext boş gelmesi durumunda exception
-            
         }
         //
 
