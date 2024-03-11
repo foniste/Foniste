@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\css\\templatemo-topic-listing.css"
     },
     {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\theme.css",
+      "PackagePath": "staticwebassets\\css\\theme.css"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\theme.min.css",
+      "PackagePath": "staticwebassets\\css\\theme.min.css"
+    },
+    {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -43,6 +51,10 @@
     {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\carousel-2.jpg",
       "PackagePath": "staticwebassets\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\webp\\abstract3.webp",
+      "PackagePath": "staticwebassets\\img\\webp\\abstract3.webp"
     },
     {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\bootstrap.bundle.min.js",
@@ -249,6 +261,10 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\counterup\\counterup.min.js",
+      "PackagePath": "staticwebassets\\lib\\counterup\\counterup.min.js"
+    },
+    {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -295,6 +311,14 @@
     {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\wow\\wow.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.js"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.min.js"
     },
     {
       "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.Foniste.Microsoft.AspNetCore.StaticWebAssets.props",

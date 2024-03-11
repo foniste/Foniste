@@ -11,7 +11,7 @@ https://templatemo.com/tm-590-topic-listing
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #13547a;
+  --primary-color:                #212529; 
   --secondary-color:              #0d6efd;
   --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #80d0c7;
@@ -402,8 +402,8 @@ strong {
   background: var(--white-color);
   border-radius: var(--border-radius-large);
   display: inline-block;
-  font-size: var(--h5-font-size);
-  width: 40px;
+  font-size: var(--h6-font-size);
+  width: 160px;
   height: 40px;
   line-height: 40px;
   text-align: center;

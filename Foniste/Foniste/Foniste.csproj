@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Views\Login\" />
     <Folder Include="Views\Project\" />
-    <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
 </Project>
