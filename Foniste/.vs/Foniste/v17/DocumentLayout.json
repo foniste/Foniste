@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GitHubRepo\\Foniste\\Foniste\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|c:\\githubrepo\\foniste\\foniste\\fonapi\\service\\venturedbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|solutionrelative:fonapi\\service\\venturedbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|c:\\githubrepo\\foniste\\foniste\\fonapi\\interfaces\\iventuredbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|solutionrelative:fonapi\\interfaces\\iventuredbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|c:\\githubrepo\\foniste\\foniste\\fonapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|solutionrelative:fonapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|c:\\githubrepo\\foniste\\foniste\\fonapi\\controllers\\venturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|solutionrelative:fonapi\\controllers\\venturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|c:\\githubrepo\\foniste\\foniste\\fonapi\\database\\venturesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|solutionrelative:fonapi\\database\\venturesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|c:\\githubrepo\\foniste\\foniste\\fonapi\\service\\accountdbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7C7F07-EAB7-4FC0-A5AB-767372272A29}|FonApi\\FonApi.csproj|solutionrelative:fonapi\\service\\accountdbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VenturesDbContext.cs",
+              "DocumentMoniker": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Database\\VenturesDbContext.cs",
+              "RelativeDocumentMoniker": "FonApi\\Database\\VenturesDbContext.cs",
+              "ToolTip": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Database\\VenturesDbContext.cs",
+              "RelativeToolTip": "FonApi\\Database\\VenturesDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T18:53:17.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Program.cs",
+              "RelativeDocumentMoniker": "FonApi\\Program.cs",
+              "ToolTip": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Program.cs",
+              "RelativeToolTip": "FonApi\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T18:51:43.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IVentureDbService.cs",
+              "DocumentMoniker": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Interfaces\\IVentureDbService.cs",
+              "RelativeDocumentMoniker": "FonApi\\Interfaces\\IVentureDbService.cs",
+              "ToolTip": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Interfaces\\IVentureDbService.cs",
+              "RelativeToolTip": "FonApi\\Interfaces\\IVentureDbService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T18:49:05.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VentureController.cs",
+              "DocumentMoniker": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Controllers\\VentureController.cs",
+              "RelativeDocumentMoniker": "FonApi\\Controllers\\VentureController.cs",
+              "ToolTip": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Controllers\\VentureController.cs",
+              "RelativeToolTip": "FonApi\\Controllers\\VentureController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T18:42:57.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VentureDbService.cs",
+              "DocumentMoniker": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Service\\VentureDbService.cs",
+              "RelativeDocumentMoniker": "FonApi\\Service\\VentureDbService.cs",
+              "ToolTip": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Service\\VentureDbService.cs",
+              "RelativeToolTip": "FonApi\\Service\\VentureDbService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAQwBsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T18:32:33.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountDbService.cs",
+              "DocumentMoniker": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Service\\AccountDbService.cs",
+              "RelativeDocumentMoniker": "FonApi\\Service\\AccountDbService.cs",
+              "ToolTip": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\Service\\AccountDbService.cs",
+              "RelativeToolTip": "FonApi\\Service\\AccountDbService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T14:00:49.375Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

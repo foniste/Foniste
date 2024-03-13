@@ -8,9 +8,9 @@ namespace FonApi.Database
         public VenturesDbContext(DbContextOptions<VenturesDbContext> options) : base(options){
         }
         // Ventures Schema
-        public DbSet<VenturesDetail> VenturesDetails{get;set;}
-        public DbSet<VenturesHeader> VenturesHeader{get;set;}
-        public DbSet<VenturesImg> VenturesImg{get;set;}
+        public DbSet<VenturesDetail> venturesdetails{get;set;}
+        public DbSet<VenturesHeader> venturesheader{get;set;}
+        public DbSet<VenturesImg> venturesimg{get;set;}
         //
     }
 
