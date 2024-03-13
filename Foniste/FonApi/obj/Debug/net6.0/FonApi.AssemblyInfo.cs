@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FonApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7199ed0c1533a519423a74d2593bb137428274c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6742267136d7ee7dab8332c3d186484b80ea4cb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("FonApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FonApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

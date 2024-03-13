@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using FonApi.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 
@@ -33,6 +34,18 @@ namespace FonApi.Service{
                 signingCredentials: credentials
             );
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        //secret key oluþturma 128bit
+        public string GenerateRandomKey(int lengthInBytes)
+        {
+            // Kriptografik güvenilir rastgele sayý üreteci kullanma
+            var rng = new RNGCryptoServiceProvider();
+            byte[] keyBytes = new byte[lengthInBytes];
+            rng.GetBytes(keyBytes);
+
+            // Byte dizisini Base64 encoding ile stringe çevirme
+            return Convert.ToBase64String(keyBytes);
         }
     }
 }

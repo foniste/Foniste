@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kdC5eG49UIROTQ0FW1yMmIJ+ClDt/mI5eEmNMcZrk+R4at+YhXGBrfzPOHozrP9ltKy5TlyBq8mfEzfdeJmopQ==",
+  "dgSpecHash": "pj34LVYZ0pJG4/rSv7jYctVDTKpFQokrrQn21BXPo4EMpIVaumLw97s8TWREop/sWCobFxQARZDwmhq8aOcsCQ==",
   "success": true,
   "projectFilePath": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\FonApi.csproj",
   "expectedPackageFiles": [
@@ -35,11 +35,7 @@
     "C:\\Users\\melih\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\melih\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\melih\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.4.0\\system.identitymodel.tokens.jwt.7.4.0.nupkg.sha512",
-    "C:\\Users\\melih\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\melih\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\melih\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512",
-    "C:\\Users\\melih\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\melih\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512"
+    "C:\\Users\\melih\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

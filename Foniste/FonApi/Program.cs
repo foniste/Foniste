@@ -1,6 +1,8 @@
+using System.Text;
 using FonApi.Database;
 using FonApi.Service;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 // Configuration özelliğini ekleyin
@@ -23,7 +25,6 @@ builder.Services.AddDbContext<VenturesDbContext>(options =>
 //Service Configurations
 builder.Services.AddScoped<AccountDbService>();
 builder.Services.AddScoped<VentureDbService>();
-//builder.Services.AddScoped<JwtService>();
 //
 
 //Swagger Configurations
@@ -33,25 +34,26 @@ builder.Services.AddCors();
 //
 
 
-// //JWT Service Configurations
-// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//     .AddJwtBearer(options =>
-//     {
-//         options.TokenValidationParameters = new TokenValidationParameters
-//         {
-//             ValidateIssuer = true,
-//             ValidateAudience = true,
-//             ValidateLifetime = true,
-//             ValidateIssuerSigningKey = true,
-//             ValidIssuer = "http://localhost:7173",
-//             ValidAudience = "account",
-//             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("foniste"))
-//         };
-//     });
-
-
-// //
-
+var key = Encoding.UTF8.GetBytes(configuration["Jwt:Secret"]);
+            builder.Services.AddAuthentication(options => {
+                options.DefaultAuthenticateScheme = "JwtBearer";
+                options.DefaultChallengeScheme = "JwtBearer";
+            })
+            .AddJwtBearer("JwtBearer", jwtBearerOptions =>
+            {
+                jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = true,
+                    ValidIssuer = configuration["Jwt:Issuer"],
+                    ValidateAudience = true,
+                    ValidAudience = configuration["Jwt:Audience"],
+                    ValidateLifetime = true,
+                    ClockSkew = System.TimeSpan.FromMinutes(60),
+                    RequireExpirationTime = true,
+                };
+            });
 
 var app = builder.Build();
 

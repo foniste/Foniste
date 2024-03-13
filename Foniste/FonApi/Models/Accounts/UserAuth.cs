@@ -12,6 +12,7 @@ namespace FonApi.Models.Accounts{
         [MaxLength(255)]
         public string? Email { get; set; }
 
+        [MaxLength(255)]
         [Column("password")]
         public string? Password { get; set; }
 
