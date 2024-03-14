@@ -13,13 +13,15 @@ namespace FonApi.Controllers
     public class VentureController : ControllerBase
     {
         private readonly VentureDbService _ventureDbService;
+
         //Constructor
         public VentureController(VentureDbService ventureDbService)
         {
-            _ventureDbService = ventureDbService;//?? throw new ArgumentNullException(nameof(ventureDbService));
+            _ventureDbService = ventureDbService;
         }
         //
 
+        // Tüm girişimleri getiren metod
         [HttpGet("allventures")]
         public async Task<IActionResult> GetAllVentures() 
         {
@@ -39,5 +41,6 @@ namespace FonApi.Controllers
                 return Ok(ex.Message);
             }
         }
+        //
     }
 }
