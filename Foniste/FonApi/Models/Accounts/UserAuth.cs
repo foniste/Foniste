@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using FonApi.Models.Exception;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FonApi.Models.Accounts{
     [Table("user_auth")]
-    public class UserAuth {
+    public class UserAuth{
         [Key]
         [Column("user_id")]
         public int UserId { get; set; }

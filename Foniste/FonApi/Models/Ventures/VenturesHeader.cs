@@ -1,10 +1,10 @@
+using FonApi.Models.Exception;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FonApi.Models.Ventures{
     [Table("ventures_header")]
-    public class VenturesHeader
-    {
+    public class VenturesHeader{
         [Key]
         [Column("venture_id")]
         public int VentureId { get; set; }

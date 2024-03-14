@@ -16,7 +16,7 @@ namespace FonApi.Controllers
         //Constructor
         public VentureController(VentureDbService ventureDbService)
         {
-            _ventureDbService = ventureDbService ?? throw new ArgumentNullException(nameof(ventureDbService));
+            _ventureDbService = ventureDbService;//?? throw new ArgumentNullException(nameof(ventureDbService));
         }
         //
 
@@ -36,7 +36,7 @@ namespace FonApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return Ok(ex.Message);
             }
         }
     }
