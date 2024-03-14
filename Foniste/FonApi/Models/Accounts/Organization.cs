@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using FonApi.Models.Exception;
 using Microsoft.EntityFrameworkCore;
 
 namespace FonApi.Models.Accounts{

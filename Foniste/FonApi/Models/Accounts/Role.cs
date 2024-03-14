@@ -1,9 +1,10 @@
+using FonApi.Models.Exception;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FonApi.Models.Accounts{
     [Table("role")]
-    public class Role {
+    public class Role{
         [Key]
         [Column("role_id")]
         public int RoleId { get; set; }
