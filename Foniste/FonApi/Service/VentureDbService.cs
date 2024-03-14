@@ -4,16 +4,14 @@ using FonApi.Models.Exception;
 using Microsoft.EntityFrameworkCore;
 
 namespace FonApi.Service {
-    public class VentureDbService : IVentureDbService {
+    public class VentureDbService : IVentureDbService{
         private readonly VenturesDbContext _venturesDbContext;
 
-        //Exception model 
-        public int exceptionId;
-        public string exceptionMessage;
-        public string exceptionDetail;
-        //
+        public int exceptionId { get; set; }
+        public string exceptionMessage { get; set; }
+        public string exceptionDetail { get; set; }
 
-        //Constructor
+        // Constructor
         public VentureDbService(VenturesDbContext venturesDbContext) {
             try
             {
@@ -21,9 +19,7 @@ namespace FonApi.Service {
 
                 this.exceptionId = 0;
                 this.exceptionMessage = "Sorun Yok";
-                this.exceptionDetail  = "Exception Yok.\n" +
-                                   "Sorunsuz çalıştı.\n" +
-                                   "ID: " + exceptionId;
+                this.exceptionDetail  = "Hata Yok. Sorunsuz çalıştı. Veri çekmeye çalıştığınız tabloda veri bulunmamaktadır. ID: " + exceptionId;
 
                 var excList = new List<dynamic>
                 {
@@ -37,9 +33,7 @@ namespace FonApi.Service {
             {
                 this.exceptionId = 1;
                 this.exceptionMessage = ex.Message;
-                this.exceptionDetail = "DbUpdateException\n" +
-                                    "Veritabanı işleminde bir hata oluştu.\n" +
-                                    "ID: " + exceptionId;
+                this.exceptionDetail = "DbUpdateException oluştu .Veritabanı işleminde bir hata oluştu. ID: " + exceptionId;
                 var excList = new List<dynamic>
                 {
                     this.exceptionId,
@@ -52,9 +46,7 @@ namespace FonApi.Service {
             {
                 this.exceptionId = 2;
                 this.exceptionMessage = ex.Message;
-                this.exceptionDetail = "InvalidOperationException\n" +
-                                        "Desteklenmeyen bir işlem yapılmaya çalışıldı.\n" +
-                                        "ID: " + exceptionId;
+                this.exceptionDetail = "InvalidOperationException oluştu. Desteklenmeyen bir işlem yapılmaya çalışıldı. ID: " + exceptionId;
 
                 var excList = new List<dynamic>
                 {
@@ -68,9 +60,7 @@ namespace FonApi.Service {
             {
                 this.exceptionId = 3;
                 this.exceptionMessage = ex.Message;
-                this.exceptionDetail = "InvalidOperationException\n" +
-                                        "Beklenmedik bir durum oluştu.\n" +
-                                        "ID: " + exceptionId;
+                this.exceptionDetail = "InvalidOperationException oluştu. Beklenmedik bir durum oluştu. ID: " + exceptionId;
 
                 var excList = new List<dynamic>
                 {
@@ -83,9 +73,7 @@ namespace FonApi.Service {
             catch (ArgumentNullException ex)
             {
                 this.exceptionId = 4;
-                this.exceptionMessage = "ArgumentNullException\n" +
-                                        "Null bir argüman geçildi.\n" +
-                                        "ID: " + exceptionId;
+                this.exceptionMessage = "ArgumentNullException oluştu. Null bir argüman geçildi. ID: " + exceptionId;
                 this.exceptionDetail = ex.Message;
 
                 var excList = new List<dynamic>
@@ -99,7 +87,7 @@ namespace FonApi.Service {
         }
         //
 
-        //Constructor da exception yakaladığında exceptionlog tablosunda veri insert eden metod
+        // Constructor da exception yakaladığında exceptionlog tablosunda veri insert eden metod
         public void InsertWhenException(List<dynamic> excList)
         {
             var newexception = new ExceptionLog()
@@ -109,21 +97,54 @@ namespace FonApi.Service {
                 Detail = excList[2]
             };
 
-            _venturesDbContext.exceptionlog.Add(newexception);
-            _venturesDbContext.SaveChanges();
+            try
+            {
+                _venturesDbContext.exceptionlog.Add(newexception);
+                _venturesDbContext.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                // Veritabanı güncelleme hatası
+                Console.WriteLine("Veritabanı güncelleme hatası: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Diğer hatalar
+                Console.WriteLine("Beklenmeyen bir hata oluştu: " + ex.Message);
+            }
         }
+        //
 
-        public int ControlDatabaseException()
+        // Tüm ventureheader verilerini getiren metod
+        public async Task<List<object>> GetAllHeaders()
         {
-            return 0; // düzeltilcek
+            if (!IsThereException())
+            {
+                var exceptionHolder = await _venturesDbContext.exceptionlog
+                                                              .OrderByDescending(vh => vh.Id)
+                                                              .FirstOrDefaultAsync();
+                return new List<object> { exceptionHolder };
+            }
+
+            var holder = await _venturesDbContext.venturesheader.ToListAsync();
+
+            if(holder == null || holder.Count == 0) {
+                var exceptionHolder = await _venturesDbContext.exceptionlog
+                                                              .OrderByDescending(vh => vh.Id)
+                                                              .FirstOrDefaultAsync();
+                return new List<object> { exceptionHolder };
+            }
+
+
+            return holder.Cast<object>().ToList();
         }
+        //
 
-
-
-        //Exception oluşup oluşmadığının kontrolü
+        // REVİZE EDİLECEK //
+        // Exception oluşup oluşmadığının kontrolü
         public bool IsThereException()
         {
-            if(ControlDatabaseException() == 1 ||
+            if (ControlDatabaseException() == 1 ||
                ControlDatabaseException() == 2 ||
                ControlDatabaseException() == 3 ||
                ControlDatabaseException() == 4)
@@ -134,60 +155,12 @@ namespace FonApi.Service {
         }
         //
 
-        // Tüm ventureheader verilerini getiren metod
-        public async Task<List<object>> GetAllHeaders()
+        public int ControlDatabaseException()
         {
-            if (!IsThereException())
-            {
-                var exceptionHolder = await _venturesDbContext.exceptionlog
-                                                               .OrderByDescending(vh => vh.Id)
-                                                               .FirstOrDefaultAsync();
-                return new List<object> { exceptionHolder };
-            }
-            var holder = await _venturesDbContext.venturesheader.ToListAsync();
-            return holder.Cast<object>().ToList();
+            return 0; 
         }
         //
 
-        //// Tüm venturedetails verilerini getiren metod
-        //public async Task<List<VenturesDetail>> GetAllDetails()
-        //{
-        //    return await _venturesDbContext.VenturesDetails.ToListAsync();
-        //}
-        ////
-
-        //// Yeni bir girişim ilanı eklendiğinde header tablosuna insert eden metod
-        //public void InsertNewVentureHeader(VenturesHeader venturesHeader)
-        //{
-        //    try
-        //    {
-        //        _venturesDbContext.VenturesHeader.Add(venturesHeader);
-        //        _venturesDbContext.SaveChanges();
-        //    }
-        //    catch (System.Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
-        ////
-
-
-        //// Yeni bir ilan açıldığında ilan detaylarını tabloya insert eden metod
-        //public void InsertNewVentureDetails(VenturesDetail venturesDetail)
-        //{
-        //    try
-        //    {
-        //        _venturesDbContext.VenturesDetails.Add(venturesDetail);
-        //        _venturesDbContext.SaveChanges();
-        //    }
-        //    catch (System.Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
-        ////
-
-
-
+        // revize edilecek //
     }
 }
