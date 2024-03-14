@@ -140,6 +140,8 @@ namespace FonApi.Service {
         }
         //
 
+
+
         // REVİZE EDİLECEK //
         // Exception oluşup oluşmadığının kontrolü
         public bool IsThereException()
