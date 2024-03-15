@@ -21,19 +21,17 @@ namespace FonApi.Controllers
         }
         //
 
-        // Tüm girişimleri getiren metod
-        [HttpGet("allventures")]
-        public async Task<IActionResult> GetAllVentures() 
-        {
+        
+        [HttpGet("/ventures")]
+        public async Task<IActionResult> GetAllVentures()
+        {// Tüm girişimleri getiren metod
             try
             {
                 var ventures = await _ventureDbService.GetAllHeaders();
-
                 if (ventures != null && ventures.Count > 0)
                 {
                     return Ok(ventures);
                 }
-
                 return Ok(ventures);
             }
             catch (Exception ex)
@@ -41,6 +39,41 @@ namespace FonApi.Controllers
                 return Ok(ex.Message);
             }
         }
-        //
+
+        [HttpGet("ventures/all/details")]
+        public async Task<IActionResult> GetAllVentureDetails()
+        {// Tüm girişimleri getiren metod
+            try
+            {
+                var ventures = await _ventureDbService.GetAllDetails();
+                if (ventures != null && ventures.Count > 0)
+                {
+                    return Ok(ventures);
+                }
+                return Ok(ventures);
+            }
+            catch (Exception ex)
+            {
+                return Ok(ex.Message);
+            }
+        }
+
+        [HttpGet("ventures/all/img")]
+        public async Task<IActionResult> GetAllVentureImg()
+        {// Tüm girişimleri getiren metod
+            try
+            {
+                var ventures = await _ventureDbService.GetAllImg();
+                if (ventures != null && ventures.Count > 0)
+                {
+                    return Ok(ventures);
+                }
+                return Ok(ventures);
+            }
+            catch (Exception ex)
+            {
+                return Ok(ex.Message);
+            }
+        }
     }
 }
