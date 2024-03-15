@@ -59,8 +59,28 @@
   },
   {
     "ContainingType": "FonApi.Controllers.VentureController",
+    "Method": "GetAllVentureDetails",
+    "RelativePath": "Venture/ventures/all/details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FonApi.Controllers.VentureController",
+    "Method": "GetAllVentureImg",
+    "RelativePath": "Venture/ventures/all/img",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FonApi.Controllers.VentureController",
     "Method": "GetAllVentures",
-    "RelativePath": "Venture/allventures",
+    "RelativePath": "ventures",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

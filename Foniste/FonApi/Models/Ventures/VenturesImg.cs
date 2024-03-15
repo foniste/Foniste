@@ -14,7 +14,7 @@ namespace FonApi.Models.Ventures{
         public string? ImgName { get; set; }
 
         [Column("img_file")]
-        public string? ImgFile { get; set; }
+        public byte[]? ImgFile { get; set; }
 
         [Column("org_id")]
         public int OrgId { get; set; }
