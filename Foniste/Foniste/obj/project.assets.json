@@ -8,7 +8,11 @@
     "net6.0": []
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\melih\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\Berk\\.nuget\\packages\\": {},
+>>>>>>> Stashed changes
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -17,14 +21,18 @@
       "projectUniqueName": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj",
       "projectName": "Foniste",
       "projectPath": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj",
-      "packagesPath": "C:\\Users\\melih\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Berk\\.nuget\\packages\\",
       "outputPath": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< Updated upstream
         "C:\\Users\\melih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Berk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "xznqdQOuOsyP1LGziVyS4gy8/kPeN0rRYSJcvqf5IW1BME7bFRwmPtLV/iWdxMuqOG3TR0JPJ+L1EcN5V/2+qg==",
+=======
+  "dgSpecHash": "5rldGPT9KP3dzReA9xggzETT6xvUEZRnxtkOwaCWZhmsK5+z1XQ0JOwgYLsv1gS5mPJEEYZ4smyA1FlIqX6avQ==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj",
   "expectedPackageFiles": [],
