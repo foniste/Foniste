@@ -6,7 +6,6 @@ C:\GitHubRepo\Foniste\Foniste\Foniste\bin\Release\net6.0\Foniste.deps.json
 C:\GitHubRepo\Foniste\Foniste\Foniste\bin\Release\net6.0\Foniste.runtimeconfig.json
 C:\GitHubRepo\Foniste\Foniste\Foniste\bin\Release\net6.0\Foniste.dll
 C:\GitHubRepo\Foniste\Foniste\Foniste\bin\Release\net6.0\Foniste.pdb
-C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.csproj.AssemblyReference.cache
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.GeneratedMSBuildEditorConfig.editorconfig
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.AssemblyInfoInputs.cache
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.AssemblyInfo.cs
@@ -21,11 +20,10 @@ C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\staticwebassets\msbuild
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\staticwebassets.pack.json
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\staticwebassets.build.json
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\staticwebassets.development.json
-C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\scopedcss\bundle\Foniste.styles.css
-C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\scopedcss\projectbundle\Foniste.bundle.scp.css
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.dll
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\refint\Foniste.dll
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.pdb
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.genruntimeconfig.cache
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\ref\Foniste.dll
+C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.sourcelink.json

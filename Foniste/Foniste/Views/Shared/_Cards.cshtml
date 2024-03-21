@@ -1,0 +1,206 @@
+﻿<!-- DUYURULAR VE ETKİNLİKLER BAŞLANGIÇ -->
+<div class="anasayfa-duyurular-kapsayici" id="duyurular-etkinlikler">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <h3 class="anasayfa-duyurular-baslik">
+                    DUYURULAR
+                </h3>
+                <div class="anasayfa-duyurular-baslik-cizgi"></div>
+                <div class="anasayfa-duyurular">
+                    <?php foreach($duyurular as $row) : ?>
+                    <a href="<?php echo base_url() ?>duyurular/duyuru/<?php echo $row->id; ?>">
+                        <div class="anasayfa-duyurular-duyuru">
+                            <div class="anasayfa-duyurular-duyuru-tarih">
+                                <span class="anasayfa-duyurular-duyuru-tarih-tarih-gun">13</span>
+                                <span class="anasayfa-duyurular-duyuru-tarih-tarih-ay">Kas</span>
+                            </div>
+                            <h3 class="anasayfa-duyurular-duyuru-baslik">duyuruBaslik</h3>
+                        </div>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
+                <button class="tumunu-gor-buton"><a href="<?php echo base_url() ?>duyurular">Tüm Duyuruları Gör</a></button>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <h3 class="anasayfa-duyurular-baslik">
+                    ETKİNLİKLER
+                </h3>
+                <div class="anasayfa-duyurular-baslik-cizgi"></div>
+                <div class="anasayfa-etkinlikler">
+                    <?php foreach ($etkinlikler as $row): ?>
+                    <a href="<?php echo base_url() ?>etkinlikler/etkinlik/<?php echo $row->id; ?>">
+                        <div class="anasayfa-etkinlikler-etkinlik">
+                            <div class="anasayfa-etkinlikler-etkinlik-tarih">
+                                <span class="anasayfa-etkinlikler-etkinlik-tarih-tarih-gun">13</span>
+                                <span class="anasayfa-etkinlikler-etkinlik-tarih-tarih-ay">Kas</span>
+                            </div>
+                            <h3 class="anasayfa-etkinlikler-etkinlik-baslik"><?php echo $row->etkinlikBaslik; ?></h3>
+                        </div>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
+                <button class="tumunu-gor-buton"><a href="<?php echo base_url() ?>etkinlikler">Tüm Etkinlikleri Gör</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- DUYURULAR VE ETKİNLİKLER BİTİŞ -->
+<!-- HABERLER BAŞLANGIÇ -->
+<div class="anasayfa-haberler-kapsayici" id="haberler">
+    <h3 class="anasayfa-haberler-baslik">
+        HABERLER
+    </h3>
+    <div class="anasayfa-duyurular-baslik-cizgi"></div>
+    <div class="container">
+        <div class="row">
+            <?php foreach($haberler as $row): ?>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="anasayfa-haberler">
+                    <a href="<?php echo base_url() ?>haberler/haber/<?php echo $row->id; ?>">
+                        <img class="anasayfa-haberler-fotograf" src="<?php echo base_url()." uploads /haberler/".$row->haberGorsel; ?>">
+                    </a>
+                    <h3 class="anasayfa-haberler-alt-baslik"><?php echo $row->haberBaslik; ?></h3>
+                    <span class="anasayfa-haberler-aciklama"><?php echo $row->haberIcerik; ?></span>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <button class="tumunu-gor-buton"><a href="<?php echo base_url() ?>haberler">Tüm Haberleri Gör</a></button>
+    </div>
+</div>
+<!-- HABERLER BİTİŞ -->
+<!-- DÜSTATİSTİK BAŞLANGIÇ -->
+
+<div class="dustatistik-kapsayici">
+    <h3 class="dustatistik-baslik">DÜSTATİSTİK</h3>
+    <div class="dustatistik-baslik-cizgi"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 dustatistik-ikonlar-kapsayici">
+                <i class="fa fa-university dustatistik-ikonlar"></i>
+                <span class="dustatistik-sayilar count"><?php echo $dustatistik["dustatistik_fakulteler"]; ?></span>
+                <span class="dustatistik-aciklama">FAKÜLTELER</span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 dustatistik-ikonlar-kapsayici">
+                <i class="fa fa-book dustatistik-ikonlar"></i>
+                <span class="dustatistik-sayilar count"><?php echo $dustatistik["dustatistik_yuksekokul"]; ?></span>
+                <span class="dustatistik-aciklama">YÜKSEKOKUL</span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 dustatistik-ikonlar-kapsayici">
+                <i class="fa fa-users dustatistik-ikonlar"></i>
+                <span class="dustatistik-sayilar count"><?php echo $dustatistik["dustatistik_ogrencisayisi"]; ?></span>
+                <span class="dustatistik-aciklama">ÖĞRENCİ SAYISI</span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 dustatistik-ikonlar-kapsayici">
+                <i class="fa fa-graduation-cap dustatistik-ikonlar"></i>
+                <span class="dustatistik-sayilar count"><?php echo $dustatistik["dustatistik_mezunsayisi"]; ?></span>
+                <span class="dustatistik-aciklama">MEZUN SAYISI</span>
+            </div>
+        </div>
+        <div class="row" style="padding-top:50px;">
+            <!-- inline css -->
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 dustatistik-ikonlar-kapsayici">
+                <i class="fa fa-id-card-o dustatistik-ikonlar"></i>
+                <span class="dustatistik-sayilar count"><?php echo $dustatistik["dustatistik_akademisyensayisi"]; ?></span>
+                <span class="dustatistik-aciklama">AKADEMİSYEN SAYISI</span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 dustatistik-ikonlar-kapsayici">
+                <i class="fa fa-pencil dustatistik-ikonlar"></i>
+                <span class="dustatistik-sayilar count"><?php echo $dustatistik["dustatistik_tubitakprojesi"]; ?></span>
+                <span class="dustatistik-aciklama">TÜBİTAK PROJESİ</span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 dustatistik-ikonlar-kapsayici">
+                <i class="fa fa-check dustatistik-ikonlar"></i>
+                <span class="dustatistik-sayilar count"><?php echo $dustatistik["dustatistik_bapprojesi"]; ?></span>
+                <span class="dustatistik-aciklama">BAP PROJESİ</span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 dustatistik-ikonlar-kapsayici">
+                <i class="fa fa-suitcase dustatistik-ikonlar"></i>
+                <span class="dustatistik-sayilar count"><?php echo $dustatistik["dustatistik_lisansprogrami"]; ?></span>
+                <span class="dustatistik-aciklama">LİSANS PROGRAMI</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- DÜSTATİSTİK BİTİŞ -->
+<!-- Features Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
+            <h1 class="mb-0">We Are Here to Grow Your Business Exponentially</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-cubes text-white"></i>
+                        </div>
+                        <h4>Best In Industry</h4>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                    </div>
+                    <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-award text-white"></i>
+                        </div>
+                        <h4>Award Winning</h4>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/tanıtım.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-users-cog text-white"></i>
+                        </div>
+                        <h4>Professional Staff</h4>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                    </div>
+                    <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features Start -->
+
+
+<!-- PAYDAŞLARIMIZ BAŞLANGIÇ -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5 mb-5">
+        <div class="bg-white">
+            <div class="owl-carousel vendor-carousel">
+                <img src="img/vendor-1.jpg" alt="">
+                <img src="img/vendor-2.jpg" alt="">
+                <img src="img/vendor-3.jpg" alt="">
+                <img src="img/vendor-4.jpg" alt="">
+                <img src="img/vendor-5.jpg" alt="">
+                <img src="img/vendor-6.jpg" alt="">
+                <img src="img/vendor-7.jpg" alt="">
+                <img src="img/vendor-8.jpg" alt="">
+                <img src="img/vendor-9.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- PAYDAŞLARIMIZ BİTİŞ -->
+
+
+<div class="du-yardim">
+    <h3 class="du-yardim-baslik">Yardıma mı ihtiyacınız var?</h3>
+    <div class="du-yardim-buton"><a href="https://rehber.duzce.edu.tr/">İletişime Geçin</a></div>
+</div>
