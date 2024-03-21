@@ -20,9 +20,7 @@ C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\staticwebassets\msbuild
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\staticwebassets.pack.json
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\staticwebassets.build.json
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\staticwebassets.development.json
-C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\scopedcss\bundle\Foniste.styles.css
-C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\scopedcss\projectbundle\Foniste.bundle.scp.css
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.dll
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\refint\Foniste.dll
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.pdb
