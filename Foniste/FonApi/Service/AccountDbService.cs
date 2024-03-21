@@ -1,4 +1,6 @@
-﻿using FonApi.Database;
+﻿using System.Security.Cryptography;
+using System.Text;
+using FonApi.Database;
 using FonApi.Interfaces;
 using FonApi.Models.Accounts;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +13,6 @@ namespace FonApi.Service {
         public AccountDbService(AccountsDbContext accountsDbContext) {
             _accountsDbContext = accountsDbContext ?? throw new ArgumentNullException(nameof(accountsDbContext));
             //_accountsDbContext boş gelmesi durumunda exception
-            
         }
         //
 
@@ -35,9 +36,23 @@ namespace FonApi.Service {
         // ?---------------------------------------------------------------------------------//
 
         // Tüm kullancıların auth datasını getiren method
-        public async Task<List<UserAuth>> GetAllUserAuthenticationData(){
-            return await _accountsDbContext.user_auth.ToListAsync();
+        public int GetUserIdByEmail(string email,string password){
+            try {
+                int holder = _accountsDbContext.user_auth
+                .Where(user => user.Email == email)
+                .Select(user => user.UserId).FirstOrDefault();
+
+                if(holder == null){
+                    return 0;
+                }
+                
+                return holder;
+            }
+            catch (System.Exception) {
+                throw;
+            }
         }
+        //
 
         //Kayıt olurken aynı email ile kaydedilmiş bir user var mı kontrolü yapan method
         public bool IsExistsInUserDb(string email){
@@ -60,6 +75,35 @@ namespace FonApi.Service {
             {
                 throw;
             }
+        }
+        //
+
+        // Login methodu
+        public bool Login(string email,string password){
+            var temp = _accountsDbContext
+                        .user_auth
+                        .Where(c => c.Email == email && c.Password == password)
+                        .ToList();
+
+            if(temp.Count == 0) {
+                return false;
+            }
+            return true;
+        }
+        //
+
+        //Sha-256 şifreleme metodu
+        public string HashSHA256(string input)
+        {
+            SHA256 sha256 = SHA256.Create();
+            
+            byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+            byte[] hashBytes = sha256.ComputeHash(inputBytes);
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < hashBytes.Length; i++) {
+                stringBuilder.Append(hashBytes[i].ToString("x2"));
+            }
+            return stringBuilder.ToString();
         }
         //
 
