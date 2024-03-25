@@ -1,6 +1,5 @@
 ﻿(function ($) {
     
-    new WOW().init();
     $(document).ready(function () {
         $(".vendor-carousel").owlCarousel({
             loop: true,
