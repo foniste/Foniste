@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\GitHubRepo\\Foniste\\Foniste\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B12497AF-7B31-4056-B042-8C125FD50D46}|Foniste\\Foniste.csproj|c:\\githubrepo\\foniste\\foniste\\foniste\\views\\shared\\_slider.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B12497AF-7B31-4056-B042-8C125FD50D46}|Foniste\\Foniste.csproj|solutionrelative:foniste\\views\\shared\\_slider.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B12497AF-7B31-4056-B042-8C125FD50D46}|Foniste\\Foniste.csproj|c:\\githubrepo\\foniste\\foniste\\foniste\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{B12497AF-7B31-4056-B042-8C125FD50D46}|Foniste\\Foniste.csproj|solutionrelative:foniste\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -17,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{B12497AF-7B31-4056-B042-8C125FD50D46}|Foniste\\Foniste.csproj|c:\\githubrepo\\foniste\\foniste\\foniste\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B12497AF-7B31-4056-B042-8C125FD50D46}|Foniste\\Foniste.csproj|solutionrelative:foniste\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12497AF-7B31-4056-B042-8C125FD50D46}|Foniste\\Foniste.csproj|c:\\githubrepo\\foniste\\foniste\\foniste\\views\\shared\\_slider.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B12497AF-7B31-4056-B042-8C125FD50D46}|Foniste\\Foniste.csproj|solutionrelative:foniste\\views\\shared\\_slider.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "custom.css",
               "DocumentMoniker": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\custom.css",
               "RelativeDocumentMoniker": "Foniste\\wwwroot\\css\\custom.css",
               "ToolTip": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\custom.css",
               "RelativeToolTip": "Foniste\\wwwroot\\css\\custom.css",
-              "ViewState": "AQIAAJ4BAAAAAAAAAAAIwKgBAAAiAAAA",
+              "ViewState": "AQIAAHQBAAAAAAAAAAAMwIwBAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-03-21T21:53:57.589Z",
               "IsPinned": true,
@@ -60,41 +60,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "_Slider.cshtml",
               "DocumentMoniker": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Views\\Shared\\_Slider.cshtml",
               "RelativeDocumentMoniker": "Foniste\\Views\\Shared\\_Slider.cshtml",
               "ToolTip": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Views\\Shared\\_Slider.cshtml",
               "RelativeToolTip": "Foniste\\Views\\Shared\\_Slider.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-21T21:51:02.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "_Cards.cshtml",
               "DocumentMoniker": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Views\\Shared\\_Cards.cshtml",
               "RelativeDocumentMoniker": "Foniste\\Views\\Shared\\_Cards.cshtml",
               "ToolTip": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Views\\Shared\\_Cards.cshtml",
               "RelativeToolTip": "Foniste\\Views\\Shared\\_Cards.cshtml",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAAFwAAAAmAAAA",
+              "ViewState": "AQIAANgAAAAAAAAAAAAiwOgAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-21T22:33:11.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Foniste\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Foniste\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACYAAAAGAAAA",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAiwH0AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-21T21:46:11.091Z"
+              "WhenOpened": "2024-03-21T21:46:11.091Z",
+              "EditorCaption": ""
             }
           ]
         }

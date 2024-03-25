@@ -12,10 +12,11 @@
     --konseptRenk3: #b2e0e2;
     --konseptRenk4: #37FD99;
     --headerKusakRengi: #363d41;
+    --headerYazıRengi: #F9F7F7;
     --footerKusakRengi: #363d41;
-    --headerRengi: #3443ff;
-    --footerRengi: #3443ff;
-    --hizliErisimAcilirMenuRengi: #3443ff;
+    --headerRengi: #28DF99;
+    --footerRengi: #28DF99;
+    --hizliErisimAcilirMenuRengi: #28DF99;
     --hamburgerMenuArkaplanRengi: aqua;
     --seffaflik: rgba(0, 0, 0, 0.67) !important;
     --navbarLinkHoverArkaplanRengi: #183d6e;
@@ -27,9 +28,10 @@
 body {
     /*font-family: 'Exo 2', sans-serif !important;*/
     /*font-family: 'Source Sans Pro', sans-serif !important;*/
-    font-family: 'Quicksand' !important;
+    /* font-family: 'Quicksand' !important;*/
+    font-family: 'Poppins' !important;
     position: relative;
-   /* background-image: url("../img/background-pattern.png");*/
+    /* background-image: url("../img/background-pattern.png");*/
 }
 
 i
@@ -102,7 +104,7 @@ i
     padding: 25px;
     position: absolute;
     background: var(--hizliErisimAcilirMenuRengi);
-    border-top:solid 1px #fff;
+    border-top: solid 1px #fff;
     z-index: 1000;
     transition: 0.6s ease-in-out;
 }
@@ -143,8 +145,8 @@ i
         .hizli-erisim-acilir-menu-sag ul li {
             list-style-type: none;
             padding-top: 10px;
-            display:flex;
-            justify-content:center;
+            display: flex;
+            justify-content: center;
         }
 
             .hizli-erisim-acilir-menu-sag ul li a {
@@ -152,11 +154,12 @@ i
                 color: #fff;
                 font-size: 20px;
             }
+
                 .hizli-erisim-acilir-menu-sag ul li a:hover {
                     color: aquamarine;
                     letter-spacing: 1px; /* Yazıları biraz daha yakınlaştırmak için */
                     font-weight: bold; /* Yazıları kalın yapmak için */
-                    transition:0.3s ease;
+                    transition: 0.3s ease;
                 }
 
 .hizli-erisim-ikon {
@@ -192,10 +195,9 @@ i
                 margin-left: 12px;
                 margin-right: 12px;
                 text-align: center;
-                color: #ffffff;
+                color: var(--headerYazıRengi)-;
                 line-height: 60px;
                 font-size: 17px;
-       
             }
 
                 .master-navbar ul li a:after {
@@ -205,7 +207,7 @@ i
                     left: 0;
                     width: 0%;
                     height: 3px;
-                    border-radius:2px;
+                    border-radius: 2px;
                     background-color: #fff;
                     transition: width 0.3s ease;
                 }
@@ -221,10 +223,9 @@ i
                     }
 
                 .master-navbar ul li a.buton {
-                    
                     padding: 8px 16px; /* İhtiyaca göre padding ayarlayın */
                     text-decoration: none;
-                    background-color: #007bff; /* Buton arka plan rengi */
+                    background-color: #88EEC7; /* Buton arka plan rengi */
                     color: #fff; /* Buton metin rengi */
                     border-radius: 10px; /* Yuvarlatılmış köşeler */
                     transition: background-color 0.3s ease; /* Yumuşak geçiş */
@@ -232,8 +233,7 @@ i
                 }
 
                     .master-navbar ul li a.buton:hover {
-                        background-color: aquamarine; /* Buton renginin daha koyu tonu */
-                       
+                        background-color: gray; /* Buton renginin daha koyu tonu */
                     }
 
 
@@ -263,8 +263,9 @@ i
     background-color: white;
     border-radius: 5px;
     margin: 6px 0;
-    transition:0.3s ease;
+    transition: 0.3s ease;
 }
+
 .hamburger-menu-buton-cizgiler-orta {
     width: 35px;
     height: 4px;
@@ -273,6 +274,7 @@ i
     margin: 6px 0;
     transition: 0.3s ease;
 }
+
 .hamburger-menu-buton-cizgiler-alt {
     width: 30px;
     height: 4px;
@@ -280,6 +282,7 @@ i
     border-radius: 5px;
     margin: 6px 0;
 }
+
 .hamburger-menu-buton-cizgiler-ust,
 .hamburger-menu-buton-cizgiler-alt {
     transform-origin: right;
@@ -333,14 +336,13 @@ i
     background-color: lightblue;
     padding-top: 20px;
     padding-bottom: 20px;
-    
 }
 
 .anasayfa-slider-resimler {
     width: 100%;
     height: auto !important;
     border-radius: 30px;
-    filter:contrast(0.9);
+    filter: contrast(0.9);
 }
 
     .anasayfa-slider-resimler::before {
@@ -359,29 +361,32 @@ i
     color: darkgrey;
     margin-bottom: 0px;
 }
-.anasayfa-slider-metin{
-    font-size:65px;
-    color:aliceblue;
-    margin-top:10px;
+
+.anasayfa-slider-metin {
+    font-size: 65px;
+    color: aliceblue;
+    margin-top: 10px;
 }
+
 #myCarousel {
     padding-left: 20px; /* Slider'ın solundan mesafe */
     padding-right: 20px; /* Slider'ın sağından mesafe */
-    
 }
 
 
 .carousel-control.left, .carousel-control.right {
-    background-image:none !important; /* Sol ve sağ slider kontrolündeki gölgeyi kaldırır */
+    background-image: none !important; /* Sol ve sağ slider kontrolündeki gölgeyi kaldırır */
 }
-.glyphicon{
-    color:black;/*slider sağ ve sol oklarının rengi*/
+
+.glyphicon {
+    color: white; /*slider sağ ve sol oklarının rengi*/
 }
+
 .carousel-inner .carousel-item {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Resmin bulunduğu div'e gölge ekler */
 }
 
-.carousel-caption {/*slidera uygulanan gölge ve blur efekti*/
+.carousel-caption { /*slidera uygulanan gölge ve blur efekti*/
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
@@ -392,7 +397,7 @@ i
     backdrop-filter: blur(5px); /* Arka planı bulanıklaştırma */
 }
 
-ol.carousel-indicators {/*carousel indicator tasarımı özelleştirdim hangislide parçasındaysak ona göre aktif gözüküyor*/
+ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangislide parçasındaysak ona göre aktif gözüküyor*/
     position: absolute;
     bottom: 0;
     margin: 0;
@@ -415,6 +420,7 @@ ol.carousel-indicators {/*carousel indicator tasarımı özelleştirdim hangisli
         ol.carousel-indicators li.active {
             background: white;
         }
+
 .carousel-item::after {
     content: "";
     width: 100%;
@@ -597,23 +603,29 @@ ol.carousel-indicators {/*carousel indicator tasarımı özelleştirdim hangisli
 
 .anasayfa-haberler {
     /*padding-bottom:40px;*/
-    display:flex;
-    flex-direction:column;
-    flex-basis:300px;
-    flex-shrink:0;
-    flex-grow:0;
-    max-width:100%;
-    background-color:lightgray;
-    box-shadow:0 5px 10px 0 rgba(0,0,0,0.15);
-    overflow:hidden;
-    padding-bottom:20px;
-    border-radius:15px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+    background-color: lightgray;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-radius: 15px;
     transition: 0.3s ease-in-out;
 }
-.anasayfa-haberler:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
+
+    .anasayfa-haberler a.link-sinifi {
+        text-decoration: none; /* Mause imleci ile üzerine gelindiğinde alt çizgiyi kaldırır */
+    }
+
+
+    .anasayfa-haberler:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
 
 .anasayfa-haberler-baslik {
     text-align: center;
@@ -632,40 +644,42 @@ ol.carousel-indicators {/*carousel indicator tasarımı özelleştirdim hangisli
     font-size: 20px;
     font-weight: bold;
     color: #183d6e;
-    padding:15px;
-    padding-bottom:0px;
-    margin-top:0px;
-    margin-bottom:0px;
+    padding: 15px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .anasayfa-haberler-aciklama {
-    font-size:12px;
+    font-size: 12px;
     font-weight: bold;
-    padding-right:15px;
-    padding-left:15px;
-    color:dimgray;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: dimgray;
 }
+
 .anasayfa-haberler-alt-bilgiler {
     display: flex;
     font-size: 14px;
     font-weight: bold;
     padding-right: 15px;
-    color: black !important; 
-    justify-content:space-between;
-    margin-top:4px;
+    color: black !important;
+    justify-content: space-between;
+    margin-top: 4px;
 }
 
-.anasayfa-haberler-hedeftutar{
-    margin-right:auto;
-    margin-left:15px;
-    display:flex;
+.anasayfa-haberler-hedeftutar {
+    margin-right: auto;
+    margin-left: 15px;
+    display: flex;
 }
 
 .anasayfa-haberler-tarih {
-    display:flex;
+    display: flex;
 }
+
 .anasayfa-haberler-alt-bilgiler i {
-    color: black ;
+    color: black;
 }
 
 
@@ -683,18 +697,18 @@ ol.carousel-indicators {/*carousel indicator tasarımı özelleştirdim hangisli
     margin-left: 15px; /* Başlık ile yuvarlak resim arasındaki boşluk */
     border: solid 2px #3443ff;
 }
+
 .tutar-bar-container {
     width: 100%; /* İçerik genişliğinin yüzdeye göre ayarlanması */
     height: 10px; /* Çubuk yüksekliği */
     background-color: #f0f0f0; /* Çubuğun arka plan rengi */
-    
 }
 
 .tutar-bar {
     height: 100%; /* Çubuk yüksekliği */
     background-color: #007bff; /* Dolu kısmın arka plan rengi */
-    border-top-right-radius:4px;
-    border-bottom-right-radius:4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 
@@ -732,7 +746,6 @@ ol.carousel-indicators {/*carousel indicator tasarımı özelleştirdim hangisli
 
 .dustatistik-sayilar {
     position: absolute;
-    
     font-size: 35px;
     color: var(--konseptRenk2);
     font-weight: bold;
@@ -819,18 +832,82 @@ ol.carousel-indicators {/*carousel indicator tasarımı özelleştirdim hangisli
 #master-footer-kusak {
     font-size: 14px;
     text-align: center;
-    height: 30px;
+    height: 25px;
     background-color: var(--footerKusakRengi);
-    line-height: 30px;
+    line-height: 25px;
     color: #fff;
 }
 
 .footer-appstore-playstore {
-    float: right;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right:30px
+    display:contents;
 }
+
+
+
+
+.footer-col {
+    width: 100%;
+    padding: 0 15px;
+}
+
+    .footer-col h4 {
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+    .footer-col ul li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+    .footer-col .social-links a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255,255,255,0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    }
+
+        .footer-col .social-links a:hover {
+            color: black;
+            background-color: #ffffff;
+        }
+
 
 
 /*************************************** FOOTER - END ***************************************/
@@ -1017,7 +1094,7 @@ ol.carousel-indicators {/*carousel indicator tasarımı özelleştirdim hangisli
 #basa-don {
     width: 50px;
     height: 50px;
-    border-radius:4px;
+    border-radius: 4px;
     position: fixed;
     bottom: 40px;
     right: 20px;
@@ -1027,8 +1104,8 @@ ol.carousel-indicators {/*carousel indicator tasarımı özelleştirdim hangisli
     line-height: 50px;
     background: rgba(0, 0, 0, 0.67);
 }
-    #basa-don:hover {
 
+    #basa-don:hover {
         background: rgba(0, 0, 0, 0.8); /* Hover durumunda arka plan rengini değiştir */
     }
 
@@ -1048,7 +1125,7 @@ ol.carousel-indicators {/*carousel indicator tasarımı özelleştirdim hangisli
 
 .fs-20 {
     font-size: 20px !important;
-    padding-left:5px;
+    padding-left: 5px;
 }
 
 .fs-40 {
@@ -1133,25 +1210,31 @@ ekran genişliği maksimum 992px olan cihazlar yani tablet ve telefonlar için e
         position: relative;
     }
 }
+
 @media (max-width: 576px) {
 
     #master-header {
         min-height: 86px;
     }
+
     #master-header-logo {
-        position:fixed;
+        position: fixed;
     }
+
     .hamburger-menu {
-        position:relative ;
-        left:120px;
+        position: relative;
+        left: 120px;
     }
+
     .anasayfa-slider {
         padding-top: 15px;
         padding-bottom: 15px;
     }
+
     .anasayfa-slider-resimler {
         border-radius: 20px;
     }
+
     .anasayfa-slider-ufak-baslik {
         font-size: 14px;
         color: darkgrey;
@@ -1163,12 +1246,13 @@ ekran genişliği maksimum 992px olan cihazlar yani tablet ve telefonlar için e
         color: aliceblue;
         margin-top: 2px;
     }
-    .carousel-caption { 
+
+    .carousel-caption {
         border-radius: 20px;
     }
-    
-    .carousel-indicators{
-        display:none!important;
+
+    .carousel-indicators {
+        display: none !important;
     }
 }
 
