@@ -70,5 +70,16 @@ function seffafHeader() {
 	}
 }
 
+$(document).ready(function () {// sliderýn slide larý arasýna 20px padding uyguluyor
+	$('.carousel').on('slide.bs.carousel', function () {
+		$('.carousel .item').css('margin-right', '20px');
+	});
+
+	$('.carousel').on('slid.bs.carousel', function () {
+		$('.carousel .item').css('margin-right', '0');
+	});
+});
+
+
 window.addEventListener("scroll", seffafHeader); //scroll yapýldýkça seffafHeader fonksiyonu çaðrýlsýn.
 window.addEventListener("scroll", dustatistikSayac); //scroll yapýldýkça dustatistikSayac fonksiyonu çaðrýlsýn.
