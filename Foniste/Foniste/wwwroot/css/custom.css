@@ -12,10 +12,12 @@
     --konseptRenk3: #b2e0e2;
     --konseptRenk4: #37FD99;
     --headerKusakRengi: #363d41;
-    --headerYazıRengi: #F9F7F7;
-    --footerKusakRengi: #363d41;
-    --headerRengi: #28DF99;
-    --footerRengi: #28DF99;
+    --headerYazıRengi: #311368;
+    --footerKusakRengi: #250e4f;
+    --efektRengiKoyu: #311368;
+    --efektRengiAcık: #823FF9;
+    --headerRengi: #F7F1FF;
+    --footerRengi: #311368;
     --hizliErisimAcilirMenuRengi: #28DF99;
     --hamburgerMenuArkaplanRengi: aqua;
     --seffaflik: rgba(0, 0, 0, 0.67) !important;
@@ -29,8 +31,9 @@ body {
     /*font-family: 'Exo 2', sans-serif !important;*/
     /*font-family: 'Source Sans Pro', sans-serif !important;*/
     /* font-family: 'Quicksand' !important;*/
-    font-family: 'Poppins' !important;
+    font-family: 'Overpass' !important;
     position: relative;
+    background-color: #F7F1FF!important;
     /* background-image: url("../img/background-pattern.png");*/
 }
 
@@ -195,7 +198,7 @@ i
                 margin-left: 12px;
                 margin-right: 12px;
                 text-align: center;
-                color: var(--headerYazıRengi)-;
+                color: var(--headerYazıRengi);
                 line-height: 60px;
                 font-size: 17px;
             }
@@ -208,7 +211,7 @@ i
                     width: 0%;
                     height: 3px;
                     border-radius: 2px;
-                    background-color: #fff;
+                    background-color: var(--efektRengiKoyu);
                     transition: width 0.3s ease;
                 }
 
@@ -333,7 +336,7 @@ i
 /*************************************** ANASAYFA SLIDER ***************************************/
 
 .anasayfa-slider {
-    background-color: lightblue;
+    background-color: var(--headerRengi);
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -391,7 +394,7 @@ i
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
-    background: rgba(9, 30, 62, .7) !important;
+    background: rgba(49, 19, 104, .6) !important;
     z-index: 1 !important;
     border-radius: 30px;
     backdrop-filter: blur(5px); /* Arka planı bulanıklaştırma */

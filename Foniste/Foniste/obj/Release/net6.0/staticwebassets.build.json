@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gVrXEra0IgH8HLcPGo1O42rtFQuSnGfpCLeRlK3ju6I=",
+  "Hash": "xYOiFgl1xsttjYnaXYlHBLDtCJIzxYL6o8aRBUW2CpU=",
   "Source": "Foniste",
   "BasePath": "_content/Foniste",
   "Mode": "Default",
@@ -718,44 +718,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\stakeholder.js"
-    },
-    {
-      "Identity": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\wow.js",
-      "SourceId": "Foniste",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\",
-      "BasePath": "_content/Foniste",
-      "RelativePath": "js/wow.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\wow.js"
-    },
-    {
-      "Identity": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\wow.min.js",
-      "SourceId": "Foniste",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\",
-      "BasePath": "_content/Foniste",
-      "RelativePath": "js/wow.min.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\wow.min.js"
     }
   ]
 }
