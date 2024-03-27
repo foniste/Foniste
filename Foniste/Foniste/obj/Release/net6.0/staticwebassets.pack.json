@@ -1,28 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\Foniste.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Foniste.bundle.scp.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\bootstrap-icons.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap-icons.css"
-    },
-    {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\style.css",
-      "PackagePath": "staticwebassets\\css\\style.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\templatemo-topic-listing.css",
-      "PackagePath": "staticwebassets\\css\\templatemo-topic-listing.css"
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\custom.css",
+      "PackagePath": "staticwebassets\\css\\custom.css"
     },
     {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\favicon.ico",
@@ -37,264 +21,132 @@
       "PackagePath": "staticwebassets\\fonts\\bootstrap-icons.woff2"
     },
     {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\carousel-1.jpg",
-      "PackagePath": "staticwebassets\\img\\carousel-1.jpg"
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\adminlte\\logo.png",
+      "PackagePath": "staticwebassets\\img\\adminlte\\logo.png"
     },
     {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\carousel-2.jpg",
-      "PackagePath": "staticwebassets\\img\\carousel-2.jpg"
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\app-store.png",
+      "PackagePath": "staticwebassets\\img\\app-store.png"
     },
     {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\background-pattern.png",
+      "PackagePath": "staticwebassets\\img\\background-pattern.png"
     },
     {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\click-scroll.js",
-      "PackagePath": "staticwebassets\\js\\click-scroll.js"
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\dukkan.png",
+      "PackagePath": "staticwebassets\\img\\dukkan.png"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\favicon.ico"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\google-play.png",
+      "PackagePath": "staticwebassets\\img\\google-play.png"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\logo-21.png",
+      "PackagePath": "staticwebassets\\img\\logo-21.png"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\proje-foto-1.jpg",
+      "PackagePath": "staticwebassets\\img\\proje-foto-1.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\proje-foto-2.jpg",
+      "PackagePath": "staticwebassets\\img\\proje-foto-2.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\proje-foto-3.jpg",
+      "PackagePath": "staticwebassets\\img\\proje-foto-3.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\proje-foto-4 .jpg",
+      "PackagePath": "staticwebassets\\img\\proje-foto-4 .jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\slider-foto-1.jpg",
+      "PackagePath": "staticwebassets\\img\\slider-foto-1.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\slider-foto-2.jpg",
+      "PackagePath": "staticwebassets\\img\\slider-foto-2.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\slider-foto-3.jpg",
+      "PackagePath": "staticwebassets\\img\\slider-foto-3.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\tanıtım.jpg",
+      "PackagePath": "staticwebassets\\img\\tanıtım.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\vendor-1.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-1.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\vendor-2.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-2.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\vendor-3.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-3.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\vendor-4.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-4.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\vendor-5.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-5.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\vendor-6.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-6.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\vendor-7.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-7.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\vendor-8.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-8.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\vendor-9.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-9.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\counterup.js",
+      "PackagePath": "staticwebassets\\js\\counterup.js"
     },
     {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\custom.js",
       "PackagePath": "staticwebassets\\js\\custom.js"
     },
     {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\hamburger.js",
+      "PackagePath": "staticwebassets\\js\\hamburger.js"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\jquery.counterup.js",
+      "PackagePath": "staticwebassets\\js\\jquery.counterup.js"
+    },
+    {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\jquery.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.min.js"
     },
     {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\jquery.sticky.js",
-      "PackagePath": "staticwebassets\\js\\jquery.sticky.js"
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\jquery.waypoints.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.waypoints.min.js"
     },
     {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\main.js",
-      "PackagePath": "staticwebassets\\js\\main.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "PackagePath": "staticwebassets\\lib\\bootstrap"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
-    },
-    {
-      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\js\\stakeholder.js",
+      "PackagePath": "staticwebassets\\js\\stakeholder.js"
     },
     {
       "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.Foniste.Microsoft.AspNetCore.StaticWebAssets.props",

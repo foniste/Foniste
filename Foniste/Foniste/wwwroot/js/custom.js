@@ -1,53 +1,85 @@
+// not : getElementById() metodu elementi bulamazsa null return eder.
+let hizliErisim = document.getElementById("hizli-erisim");
+let hizliErisimAcilirMenu = document.getElementById("hizli-erisim-acilir-menu");
+//let headerKusak = document.getElementById("master-header-kusak");
+let header = document.getElementById("master-header");
+let logo = document.getElementById("master-header-logo");
+let basaDonButonu = document.getElementById("basa-don");
+let slider = document.getElementById("slider");
+let duyurularVeEtkinlikler = document.getElementById("duyurular-etkinlikler");
+let haberler = document.getElementById("haberler");
+let hamburgerMenu = document.getElementById("hamburger-menu");
+let hamburgerMenuAcilirMenu = document.getElementById("hamburger-menu-acilir-menu");
 
-  (function ($) {
-  
-  "use strict";
+let headerUzunluk = /*headerKusak.offsetHeight +*/ header.offsetHeight; //header'in toplam uzunluðu.
 
-    // MENU
-    $('.navbar-collapse a').on('click',function(){
-      $(".navbar-collapse").collapse('hide');
-    });
-    
-    // CUSTOM LINK
-    $('.smoothscroll').click(function(){
-      var el = $(this).attr('href');
-      var elWrapped = $(el);
-      var header_height = $('.navbar').height();
-  
-      scrollToDiv(elWrapped,header_height);
-      return false;
-  
-      function scrollToDiv(element,navheight){
-        var offset = element.offset();
-        var offsetTop = offset.top;
-        var totalScroll = offsetTop-navheight;
-  
-        $('body,html').animate({
-        scrollTop: totalScroll
-        }, 300);
-      }
-    });
+//DUSTATÝSTÝK SAYAÇ ÝÞLEMLERÝ
+//slider, duyurular, etkinlikler ve haberler her sayfada yok. dolayýsýyla hata ile karþýlaþmamak için bunlar var mý diye ön kontrol yapalým.
+if (slider != null && duyurularVeEtkinlikler != null && haberler != null) {
+	let sliderUzunluk = slider.offsetHeight;
+	let duyurularVeEtkinliklerUzunluk = duyurularVeEtkinlikler.offsetHeight;
+	let haberlerUzunluk = haberler.offsetHeight;
+	function dustatistikSayac() {
+		let suAnkiKonum = window.pageYOffset || document.documentElement.scrollTop;
+		Uzunluk = headerUzunluk + sliderUzunluk + duyurularVeEtkinliklerUzunluk + haberlerUzunluk;
+		if (suAnkiKonum >= Uzunluk - 300) { // - 300 gibi bir deðer vermezsek haberleri tamamen geçtiðimizde ancak çalýþýyor sayaç.
+			$('.count').counterUp({
+				delay: 10,
+				time: 2000
+			});
+			window.removeEventListener("scroll", dustatistikSayac);
+		}
+	}
+}
 
-    $(window).on('scroll', function(){
-      function isScrollIntoView(elem, index) {
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
-        var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(window).height()*.5;
-        if(elemBottom <= docViewBottom && elemTop >= docViewTop) {
-          $(elem).addClass('active');
-        }
-        if(!(elemBottom <= docViewBottom)) {
-          $(elem).removeClass('active');
-        }
-        var MainTimelineContainer = $('#vertical-scrollable-timeline')[0];
-        var MainTimelineContainerBottom = MainTimelineContainer.getBoundingClientRect().bottom - $(window).height()*.5;
-        $(MainTimelineContainer).find('.inner').css('height',MainTimelineContainerBottom+'px');
-      }
-      var timeline = $('#vertical-scrollable-timeline li');
-      Array.from(timeline).forEach(isScrollIntoView);
-    });
-  
-  })(window.jQuery);
+hizliErisim.onclick = function () { //hýzlý eriþim linkine týklandýðýnda :
+	if (hizliErisimAcilirMenu.style.display === "block") { //hýzlý eriþim açýlýr menüsü zaten açýksa :
+		hizliErisimAcilirMenu.style.display = "none"; //hýzlý eriþim açýlýr menüsünü kapat.
+		hizliErisim.style.borderBottom = "none"; //hýzlý eriþim linki altýndaki border efektini kaldýr.
+	}
+	else { //hýzlý eriþim açýlýr menüsü açýk deðilse :
+		hizliErisimAcilirMenu.style.display = "block"; //hýzlý eriþim açýlýr menüsünü aç.
+		hizliErisim.style.borderBottom = "3px solid #FFF"; //hýzlý eriþim linki altýna border efekti ekle.
+	}
+};
+
+hamburgerMenu.onclick = function () {
+	if (hamburgerMenuAcilirMenu.style.display === "block") {
+		hamburgerMenuAcilirMenu.style.display = "none";
+	}
+	else {
+		hamburgerMenuAcilirMenu.style.display = "block";
+	}
+}
+
+function seffafHeader() {
+	var suAnkiKonum = window.pageYOffset || document.documentElement.scrollTop;
+	if (suAnkiKonum >= headerUzunluk) { // þu anki konum header uzunluðundan büyük veya eþitse :
+		header.classList.add("seffafHeader"); //header þeffaf olsun.
+		logo.setAttribute("src", "img/logo.png"); //logo da þeffaflýða uygun biçimde deðiþsin.
+		basaDonButonu.style.display = "block"; //baþa dön butonu gözüksün.
+		hizliErisimAcilirMenu.classList.add("hizli-erisim-seffaf");
+		hamburgerMenuAcilirMenu.classList.add("hamburger-menu-acilir-menu-seffaf");
+	}
+	else {
+		header.classList.remove("seffafHeader");
+		logo.setAttribute("src", "img/logo-21.png");
+		basaDonButonu.style.display = "none";
+		hizliErisimAcilirMenu.classList.remove("hizli-erisim-seffaf");
+		hamburgerMenuAcilirMenu.classList.remove("hamburger-menu-acilir-menu-seffaf");
+	}
+}
+
+$(document).ready(function () {// sliderýn slide larý arasýna 20px padding uyguluyor
+	$('.carousel').on('slide.bs.carousel', function () {
+		$('.carousel .item').css('margin-right', '20px');
+	});
+
+	$('.carousel').on('slid.bs.carousel', function () {
+		$('.carousel .item').css('margin-right', '0');
+	});
+});
 
 
+window.addEventListener("scroll", seffafHeader); //scroll yapýldýkça seffafHeader fonksiyonu çaðrýlsýn.
+window.addEventListener("scroll", dustatistikSayac); //scroll yapýldýkça dustatistikSayac fonksiyonu çaðrýlsýn.

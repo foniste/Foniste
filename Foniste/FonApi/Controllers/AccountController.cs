@@ -131,8 +131,5 @@ namespace FonApi.Controllers
         // ! Email ve Şifre Kullanarak Login Methodu Son //
 
         // * GİRİŞ EKRANI METODLARI SONU //
-
-
-        
     }
 }
