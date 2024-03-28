@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\img\\proje-foto-4 .jpg"
     },
     {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\proje-foto-4.jpg",
+      "PackagePath": "staticwebassets\\img\\proje-foto-4.jpg"
+    },
+    {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\slider-foto-1.jpg",
       "PackagePath": "staticwebassets\\img\\slider-foto-1.jpg"
     },
@@ -83,6 +87,14 @@
     {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\tanıtım.jpg",
       "PackagePath": "staticwebassets\\img\\tanıtım.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\team-1.jpg",
+      "PackagePath": "staticwebassets\\img\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\team-2.jpg",
+      "PackagePath": "staticwebassets\\img\\team-2.jpg"
     },
     {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\vendor-1.jpg",

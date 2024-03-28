@@ -11,19 +11,21 @@
     --konseptRenk2: #39c1cd;
     --konseptRenk3: #b2e0e2;
     --konseptRenk4: #37FD99;
+    --konseptRenk5: #884af5;
+    --konseptRenk6: #b18cf4;
     --headerKusakRengi: #363d41;
     --headerYazıRengi: #311368;
     --footerKusakRengi: #250e4f;
     --efektRengiKoyu: #311368;
     --efektRengiAcık: #823FF9;
-    --headerRengi: #F7F1FF;
+    --headerRengi: #faf8fe;
     --footerRengi: #311368;
     --hizliErisimAcilirMenuRengi: #28DF99;
     --hamburgerMenuArkaplanRengi: aqua;
     --seffaflik: rgba(0, 0, 0, 0.67) !important;
     --navbarLinkHoverArkaplanRengi: #183d6e;
     --navbarLinkHoverYaziRengi: #fff;
-    --ikonRenkleri: #b2e0e2;
+    --ikonRenkleri: #F7F1FF;
     --footerYaziRenkleri: #fff;
 }
 
@@ -33,7 +35,7 @@ body {
     /* font-family: 'Quicksand' !important;*/
     font-family: 'Overpass' !important;
     position: relative;
-    background-color: #F7F1FF!important;
+    background-color: #faf8fe !important;
     /* background-image: url("../img/background-pattern.png");*/
 }
 
@@ -70,7 +72,7 @@ i
     }
 
 .seffafHeader {
-    background: rgba(0, 0, 0, 0.67) !important;
+    background: var(--efektRengiAcık) !important;
     position: fixed;
     z-index: 1000;
 }
@@ -113,7 +115,7 @@ i
 }
 
 .hizli-erisim-seffaf {
-    background: rgba(0, 0, 0, 0.67) !important;
+    background: var(--efektRengiKoyu)!important;
 }
 
 #hizli-erisim-acilir-menu-baslik {
@@ -225,20 +227,35 @@ i
                         width: 100%
                     }
 
-                .master-navbar ul li a.buton {
-                    padding: 8px 16px; /* İhtiyaca göre padding ayarlayın */
+                .master-navbar ul li a.navbar-buton-kayıtol {
+                    padding: 10px 16px; /* İhtiyaca göre padding ayarlayın */
                     text-decoration: none;
-                    background-color: #88EEC7; /* Buton arka plan rengi */
+                    background-color: var(--efektRengiKoyu); /* Buton arka plan rengi */
                     color: #fff; /* Buton metin rengi */
                     border-radius: 10px; /* Yuvarlatılmış köşeler */
                     transition: background-color 0.3s ease; /* Yumuşak geçiş */
-                    border: solid 2px;
                 }
 
-                    .master-navbar ul li a.buton:hover {
+                    .master-navbar ul li a.navbar-buton-kayıtol:hover {
+                        background-color: #898989; /* Buton renginin daha koyu tonu */
+                    }
+                .master-navbar ul li a.navbar-buton-girisyap {
+                    padding: 10px 16px; /* İhtiyaca göre padding ayarlayın */
+                    text-decoration: none;
+                    background-color: var(--efektRengiAcık); /* Buton arka plan rengi */
+                    color: #fff; /* Buton metin rengi */
+                    border-radius: 10px; /* Yuvarlatılmış köşeler */
+                    transition: background-color 0.3s ease; /* Yumuşak geçiş */
+                }
+
+                    .master-navbar ul li a.navbar-buton-girisyap:hover {
                         background-color: gray; /* Buton renginin daha koyu tonu */
                     }
 
+
+.fa-angle-down {
+    color: var(--efektRengiKoyu); /* Navbar aşağı ikon rengi */
+}
 
 #hamburger-checkbox {
     width: 0;
@@ -254,6 +271,7 @@ i
 .hamburger-menu {
     float: right;
     margin: 20px;
+    margin-top:10px;
     padding-left: 3px;
     padding-right: 10px;
     position: relative;
@@ -263,7 +281,7 @@ i
 .hamburger-menu-buton-cizgiler-ust {
     width: 30px;
     height: 4px;
-    background-color: white;
+    background-color: var(--efektRengiKoyu);
     border-radius: 5px;
     margin: 6px 0;
     transition: 0.3s ease;
@@ -272,7 +290,7 @@ i
 .hamburger-menu-buton-cizgiler-orta {
     width: 35px;
     height: 4px;
-    background-color: white;
+    background-color: var(--efektRengiKoyu);
     border-radius: 5px;
     margin: 6px 0;
     transition: 0.3s ease;
@@ -281,7 +299,7 @@ i
 .hamburger-menu-buton-cizgiler-alt {
     width: 30px;
     height: 4px;
-    background-color: white;
+    background-color: var(--efektRengiKoyu);
     border-radius: 5px;
     margin: 6px 0;
 }
@@ -449,11 +467,12 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 }
 
 .anasayfa-duyurular-baslik-cizgi {
-    width: 56px;
-    height: 3px;
-    background-color: var(--konseptRenk1);
+    width: 70px;
+    height: 4px;
+    border-radius:2px;
+    background-color: var(--efektRengiAcık);
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .anasayfa-duyurular {
@@ -612,7 +631,7 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
     flex-shrink: 0;
     flex-grow: 0;
     max-width: 100%;
-    background-color: lightgray;
+    background-color: #fbfbfb;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
     overflow: hidden;
     padding-bottom: 20px;
@@ -632,9 +651,10 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 
 .anasayfa-haberler-baslik {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 200px;
     font-weight: bold;
     margin-top: 0px !important;
+    font-size:30px;
 }
 
 .anasayfa-haberler-fotograf {
@@ -646,7 +666,7 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 .anasayfa-haberler-alt-baslik {
     font-size: 20px;
     font-weight: bold;
-    color: #183d6e;
+    color: var(--efektRengiAcık);
     padding: 15px;
     padding-bottom: 0px;
     margin-top: 0px;
@@ -696,9 +716,9 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
     width: 38px; /* Yuvarlak resmin genişliği */
     height: 38px; /* Yuvarlak resmin yüksekliği */
     border-radius: 50%; /* Yuvarlak resmin kenar yarıçapı */
-    background-color: #3443ff; /* Yuvarlak resmin arka plan rengi */
+    background-color: var(--efektRengiKoyu); /* Yuvarlak resmin arka plan rengi */
     margin-left: 15px; /* Başlık ile yuvarlak resim arasındaki boşluk */
-    border: solid 2px #3443ff;
+    border: solid 2px var(--efektRengiAcık);
 }
 
 .tutar-bar-container {
@@ -709,11 +729,42 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 
 .tutar-bar {
     height: 100%; /* Çubuk yüksekliği */
-    background-color: #007bff; /* Dolu kısmın arka plan rengi */
+    background-color: var(--efektRengiAcık); /* Dolu kısmın arka plan rengi */
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
+.projeler-buton {
+    display: block;
+    width: 200px; /* Yeni genişlik */
+    height: 60px; /* Yeni yükseklik */
+    margin: 0 auto;
+    margin-top: 45px;
+    padding: 2px;
+    border: solid 1px #fff;
+    background-color: var(--efektRengiAcık);
+    transition: 0.5s ease-in-out;
+    border-radius:4px;
+}
 
+    .projeler-buton a {
+        display: flex; /* Yazıyı dikey ve yatay olarak hizalama */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+        text-decoration: none;
+        font-size: 20px; /* Yazı boyutunu büyütmek */
+    }
+
+    .projeler-buton:hover a {
+        color: var(--konseptRenk1);
+        background-color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
 
 
@@ -725,32 +776,18 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 
 .dustatistik-kapsayici {
     padding-bottom: 100px;
-}
-
-.dustatistik-baslik {
-    text-align: center;
-    padding-top: 100px;
-    font-weight: bold;
-    margin-top: 0px !important;
-}
-
-.dustatistik-baslik-cizgi {
-    width: 56px;
-    height: 3px;
-    background-color: var(--konseptRenk1);
-    margin: 0 auto;
-    margin-bottom: 60px;
+    padding-top:150px;
 }
 
 .dustatistik-ikonlar {
     font-size: 70px !important;
-    color: #183d6e;
+    color: var(--efektRengiAcık);
 }
 
 .dustatistik-sayilar {
     position: absolute;
     font-size: 35px;
-    color: var(--konseptRenk2);
+    color: var(--konseptRenk6);
     font-weight: bold;
     padding-left: 5px;
 }
@@ -766,13 +803,33 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 
 
 /*************************************** DÜSTATİSTİK - END ***************************************/
+/****************************************Tanıtım***************************************************/
+
+.tanıtım-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.tanıtım-icon-kutu {
+    width: 60px;
+    height: 60px;
+    border-radius: 20%; /* Kenar yuvarlaklığı */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--efektRengiAcık);
+}
 
 
+/****************************************Tanıtım***************************************************/
 /*************************************** DU-YARDIM ***************************************/
-
 .du-yardim {
     height: 200px;
-    background-color: var(--konseptRenk1);
+    background-color: var(--footerKusakRengi);
 }
 
 .du-yardim-baslik {
@@ -792,7 +849,7 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
     padding: 2px;
     border: solid 1px #fff;
     border-radius: 4px 4px 4px 4px;
-    background-color: var(--konseptRenk1);
+    background-color: var(--efektRengiAcık);
 }
 
     .du-yardim-buton a {
@@ -812,9 +869,7 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
         font-weight: bold;
     }
 
-
 /*************************************** DU-YARDIM - END ***************************************/
-
 
 /*************************************** FOOTER ***************************************/
 
@@ -844,9 +899,6 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 .footer-appstore-playstore {
     display:contents;
 }
-
-
-
 
 .footer-col {
     width: 100%;
@@ -900,18 +952,19 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
         background-color: rgba(255,255,255,0.2);
         margin: 0 10px 10px 0;
         text-align: center;
-        line-height: 40px;
+        line-height: 45px;
         border-radius: 50%;
         color: #ffffff;
         transition: all 0.5s ease;
     }
 
         .footer-col .social-links a:hover {
-            color: black;
-            background-color: #ffffff;
+            
+            background-color: var(--efektRengiAcık);
         }
-
-
+.footer-img{
+    max-height:100px;
+}
 
 /*************************************** FOOTER - END ***************************************/
 
@@ -1053,7 +1106,23 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 
 /*************************************** PAGINATION - END *************************************** */
 
+/******************************************* PAYDAŞLARIMIZ BAŞLANGIÇ ******************************/
 
+.paydaşlarımız-baslik {
+    text-align: center;
+    padding-top: 100px;
+    font-weight: bold;
+    margin-top: 0px !important;
+    font-size:30px;
+}
+.paydaşlarımız-baslik-cizgi {
+    width: 70px;
+    height: 4px;
+    border-radius:2px;
+    background-color: var(--efektRengiAcık);
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
 
 .vendor-carousel img {
     width: 100%;
@@ -1066,6 +1135,101 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
         filter: grayscale(0%); /* Fare üzerine gelince orijinal renklerini koru */
     }
 
+/*******************************************  PAYDAŞLARIMIZ SON ***************************************************/
+
+/******************************************** EKİBİMİZ BAŞLANGIÇ *************************************************/
+
+
+.ekibimiz-baslik {
+    text-align: center;
+    padding-top: 50px;
+    font-weight: bold;
+    margin-top: 0px !important;
+    font-size: 30px;
+}
+
+.ekibimiz-baslik-cizgi {
+    width: 70px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--efektRengiAcık);
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+
+
+.team-item {
+    transition: .5s;
+    width:80%;
+    border-radius:30px;
+}
+
+.team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+    .team-social a.btn {
+        position: relative;
+        margin: 0 3px;
+        margin-top: 100px;
+        opacity: 0;
+        background-color:var(--efektRengiAcık);
+        border-color:var(--konseptRenk5);
+    }
+
+.team-item:hover {
+    box-shadow: 0 0 30px #DDDDDD;
+}
+
+    .team-item:hover .team-social {
+        background: rgba(49, 19, 104, .6);
+    }
+
+        .team-item:hover .team-social a.btn:first-child {
+            opacity: 1;
+            margin-top: 0;
+            transition: .3s 0s;
+        }
+
+        .team-item:hover .team-social a.btn:nth-child(2) {
+            opacity: 1;
+            margin-top: 0;
+            transition: .3s .05s;
+        }
+
+        .team-item:hover .team-social a.btn:nth-child(3) {
+            opacity: 1;
+            margin-top: 0;
+            transition: .3s .1s;
+        }
+
+        .team-item:hover .team-social a.btn:nth-child(4) {
+            opacity: 1;
+            margin-top: 0;
+            transition: .3s .15s;
+        }
+
+.team-item .team-img img,
+.blog-item .blog-img img {
+    transition: .5s;
+}
+
+.team-item:hover .team-img img,
+.blog-item:hover .blog-img img {
+    transform: scale(1.15);
+}
+
+
+/******************************************* EKİBİMİZ  SON *********************************************/
 
 /*************************************** GENEL KULLANIM İÇİN ***************************************/
 
