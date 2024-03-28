@@ -6,7 +6,9 @@ let header = document.getElementById("master-header");
 let logo = document.getElementById("master-header-logo");
 let basaDonButonu = document.getElementById("basa-don");
 let slider = document.getElementById("slider");
-let duyurularVeEtkinlikler = document.getElementById("duyurular-etkinlikler");
+//let duyurularVeEtkinlikler = document.getElementById("duyurular-etkinlikler");
+// "tanitim" id'sine sahip öðeyi seçme
+let tanitim = document.getElementById("tanitim");
 let haberler = document.getElementById("haberler");
 let hamburgerMenu = document.getElementById("hamburger-menu");
 let hamburgerMenuAcilirMenu = document.getElementById("hamburger-menu-acilir-menu");
@@ -15,14 +17,15 @@ let headerUzunluk = /*headerKusak.offsetHeight +*/ header.offsetHeight; //header
 
 //DUSTATÝSTÝK SAYAÇ ÝÞLEMLERÝ
 //slider, duyurular, etkinlikler ve haberler her sayfada yok. dolayýsýyla hata ile karþýlaþmamak için bunlar var mý diye ön kontrol yapalým.
-if (slider != null && duyurularVeEtkinlikler != null && haberler != null) {
+if (slider != null && tanitim != null && haberler != null) {
 	let sliderUzunluk = slider.offsetHeight;
-	let duyurularVeEtkinliklerUzunluk = duyurularVeEtkinlikler.offsetHeight;
+	let tanitimUzunluk = tanitim.offsetHeight;
 	let haberlerUzunluk = haberler.offsetHeight;
+
 	function dustatistikSayac() {
 		let suAnkiKonum = window.pageYOffset || document.documentElement.scrollTop;
-		Uzunluk = headerUzunluk + sliderUzunluk + duyurularVeEtkinliklerUzunluk + haberlerUzunluk;
-		if (suAnkiKonum >= Uzunluk - 300) { // - 300 gibi bir deðer vermezsek haberleri tamamen geçtiðimizde ancak çalýþýyor sayaç.
+		Uzunluk = headerUzunluk + sliderUzunluk + tanitimUzunluk + haberlerUzunluk;
+		if (suAnkiKonum >= Uzunluk -300) {
 			$('.count').counterUp({
 				delay: 10,
 				time: 2000
