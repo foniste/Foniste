@@ -1,0 +1,129 @@
+﻿:root {
+    --efektRengiKoyu: #311368;
+    --efektRengiAcık: #823FF9;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    width: 450px;
+}
+
+    .login-form h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+.form-group {
+    margin-bottom: 20px;
+
+}
+.form-checkbox{
+    display:flex;
+    margin-bottom:15px;
+    margin-top:15px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Yazı ile checkbox arasındaki boşluğu ayarlar */
+}
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--efektRengiAcık);
+        border-radius: 5px;
+    }
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:var(--efektRengiAcık) ;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: var(--efektRengiKoyu);
+    }
+
+.register-link {
+    margin-top: 18px;
+    text-align: center;
+}
+
+    .register-link a {
+        color: var(--efektRengiAcık);
+        text-decoration: none;
+    }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+.fa-envelope {
+    color: var(--efektRengiAcık); /* E-posta ikonunun istenen renk kodu */
+
+}
+
+.fa-lock {
+    color: var(--efektRengiAcık); /* Şifre ikonunun istenen renk kodu */
+    font-size:16px;
+}
+.oto-kayıt-seçenekler {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    margin-bottom: 20px; /* Seçenekler arasındaki boşluğu istediğiniz gibi ayarlayabilirsiniz */
+    margin-top:30px;
+}
+
+.oto-kayıt-baslık {
+    margin: 0 10px; /* Veya yazısı ile çizgiler arasındaki boşluğu ayarlar */
+}
+
+.seçenek {
+    display: flex;
+    align-items: center;
+}
+
+.oto-kayıt-cizgi {
+    flex-grow: 1;
+    height: 1px; /* Çizgi kalınlığı*/
+    background-color: lightgrey; /* Çizgi rengi*/
+    margin: 0 10px; /* Çizgiler arasındaki boşluğu */
+}
+.oto-kayıt-logo {
+    width: 35px; /* Logonun varsayılan genişliği */
+    transition: transform 0.3s ease; /* Büyüme efektini eklemek için geçiş efekti */
+}
+.oto-kayıt-logo:hover {
+    transform: scale(1.2); /* Logonun üzerine gelindiğinde 1.1 kat büyütme */
+}
+
+.oto-kayıt-logo-link {
+    display: inline-block; /* Logoların yan yana olmasını sağlar */
+    margin: 0 10px; /* Logolar arasındaki boşluğu ayarlar */
+}

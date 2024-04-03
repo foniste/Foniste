@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\custom.css"
     },
     {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -39,6 +43,18 @@
     {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\favicon.ico",
       "PackagePath": "staticwebassets\\img\\favicon.ico"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\giris-github.png",
+      "PackagePath": "staticwebassets\\img\\giris-github.png"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\giris-google.png",
+      "PackagePath": "staticwebassets\\img\\giris-google.png"
+    },
+    {
+      "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\giris-linkedin.png",
+      "PackagePath": "staticwebassets\\img\\giris-linkedin.png"
     },
     {
       "Id": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\google-play.png",

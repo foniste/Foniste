@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Routing.Template;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
