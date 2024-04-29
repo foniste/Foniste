@@ -1,4 +1,6 @@
-﻿<head>
+﻿@model Foniste.Models.Accounts.UserAuth
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kayıt Ol</title>
@@ -7,7 +9,7 @@
 
 <body>
     <div class="login-container">
-        <form class="login-form" action="/signup" method="post">
+        <form asp-action="Signin" class="login-form" method="post">
             <h2>Kayıt Ol</h2>
             <div class="oto-kayıt-seçenekler">
                 <a href="#"><img src="~/img/giris-google.png" alt="Google" class="oto-kayıt-logo"></a>
@@ -21,15 +23,15 @@
 			</div>
             <div class="form-group">
                 <label for="email"><i class="fa fa-envelope"></i> E-mail</label>
-                <input type="email" id="email" name="email" required>
+                <input asp-for ="Email" type="Email" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="password"><i class="fa fa-lock"></i> Şifre</label>
-                <input type="password" id="password" name="password" required>
+                <input asp-for="Password" type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
                 <label for="password_repeat"><i class="fa fa-lock"></i> Şifre Tekrarı</label>
-                <input type="password" id="password_repeat" name="password_repeat" required>
+                <input asp-for="Password" type="password" id="password_repeat" name="password_repeat" required>
             </div>
             <div class="form-checkbox">
                 <input type="checkbox" id="kvk" name="kvk" required>

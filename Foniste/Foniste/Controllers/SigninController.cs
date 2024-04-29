@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Foniste.Models.Accounts;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
 
 namespace Foniste.Controllers
 {
@@ -10,73 +12,34 @@ namespace Foniste.Controllers
 		{
 			return View();
 		}
-
-		// GET: SigninController/Details/5
-		public ActionResult Details(int id)
-		{
-			return View();
-		}
-
-		// GET: SigninController/Create
-		public ActionResult Create()
-		{
-			return View();
-		}
-
-		// POST: SigninController/Create
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Create(IFormCollection collection)
+		public async Task<IActionResult> Signin(UserAuth newUser)
 		{
 			try
 			{
-				return RedirectToAction(nameof(Index));
-			}
-			catch
-			{
-				return View();
-			}
-		}
+				using (var client = new HttpClient())
+				{
+					client.BaseAddress = new Uri("https://localhost:7173"); // API'nin adresini belirtin
+					client.DefaultRequestHeaders.Accept.Clear();
+					client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-		// GET: SigninController/Edit/5
-		public ActionResult Edit(int id)
-		{
-			return View();
-		}
-
-		// POST: SigninController/Edit/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Edit(int id, IFormCollection collection)
-		{
-			try
-			{
-				return RedirectToAction(nameof(Index));
+					// Yeni kullanıcıyı API'ye gönder
+					HttpResponseMessage response = await client.PostAsJsonAsync("/new/usr", newUser);
+					if (response.IsSuccessStatusCode)
+					{
+						string result = await response.Content.ReadAsStringAsync();
+						return Ok(result);
+					}
+					else
+					{
+						// API'den gelen hata mesajını al ve göster
+						string error = await response.Content.ReadAsStringAsync();
+						return BadRequest(error);
+					}
+				}
 			}
-			catch
+			catch (Exception ex)
 			{
-				return View();
-			}
-		}
-
-		// GET: SigninController/Delete/5
-		public ActionResult Delete(int id)
-		{
-			return View();
-		}
-
-		// POST: SigninController/Delete/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Delete(int id, IFormCollection collection)
-		{
-			try
-			{
-				return RedirectToAction(nameof(Index));
-			}
-			catch
-			{
-				return View();
+				return StatusCode(500, $"Bir hata oluştu: {ex.Message}");
 			}
 		}
 	}

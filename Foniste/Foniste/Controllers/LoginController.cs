@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Foniste.Models.Accounts;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
 
 namespace Foniste.Controllers
 {
@@ -10,74 +12,41 @@ namespace Foniste.Controllers
         {
             return View();
         }
-
-        // GET: LoginController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: LoginController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: LoginController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<IActionResult> Login(UserAuth userCredentials)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("https://localhost:7173"); // API adresini belirtin
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    // Kullanıcı kimlik bilgilerini API'ye gönder
+                    HttpResponseMessage response = await client.PostAsJsonAsync("/login", userCredentials);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Giriş başarılıysa, API'den gelen yanıtı oku
+                        string result = await response.Content.ReadAsStringAsync();
+
+                        // Token veya diğer giriş bilgilerini işleyin ve saklayın (örneğin Cookie'de saklayabilirsiniz)
+
+                        // Başarılı giriş sonrası yönlendirme yapabilirsiniz
+                        return RedirectToAction("Index", "Home"); // Örnek olarak HomeController'ın Index metodu
+                    }
+                    else
+                    {
+                        // API'den gelen hata mesajını al ve göster
+                        string error = await response.Content.ReadAsStringAsync();
+                        return BadRequest(error);
+                    }
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                return StatusCode(500, $"Bir hata oluştu: {ex.Message}");
             }
         }
 
-        // GET: LoginController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: LoginController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: LoginController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: LoginController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }
