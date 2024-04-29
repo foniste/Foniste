@@ -19,7 +19,7 @@ namespace FonApi.Controllers
         {
             _ventureDbService = ventureDbService;
         }
-        //
+        
 
         
         [HttpGet("/ventures")]

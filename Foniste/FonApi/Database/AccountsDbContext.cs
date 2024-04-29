@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FonApi.Database
 {
-    public class AccountsDbContext : DbContext {
+    public class AccountsDbContext : DbContext 
+    {
         // Constructor
-        public AccountsDbContext(DbContextOptions<AccountsDbContext> options) : base(options){
-        }
+        public AccountsDbContext(DbContextOptions<AccountsDbContext> options) : base(options){}
         //
         
         // Accounts Schema
@@ -68,11 +68,5 @@ namespace FonApi.Database
                 return this.exceptionId;
             }
         }
-
-        
     }
-
-    
-
-    
 }
