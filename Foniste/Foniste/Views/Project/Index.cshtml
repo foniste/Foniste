@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Pager pager = new Pager();
+
+    int pageNo = 0;
+
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+}
+
+
+
+<div class="anasayfa-haberler-kapsayici" id="haberler" style="padding-bottom: 20px;">
+<h3 class="anasayfa-haberler-baslik">
+	PROJELER
+</h3>
+<div class="anasayfa-duyurular-baslik-cizgi"></div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12 col-sm-6 col-md-3 col-lg-3">
+			<div class="anasayfa-haberler">
+				<a href="#" class="link-sinifi">
+					<img class="anasayfa-haberler-fotograf" src="~/img/proje-foto-1.jpg">
+
+					<div class="tutar-bar-container">
+						<div class="tutar-bar" style="width: 70%;"></div>
+					</div>
+					<div class="anasayfa-haberler-bilgi">
+						<img class="yuvarlak-image" src="~/img/proje-foto-1.jpg"> <!-- Yuvarlak resim firma avatar logo vs için -->
+						<div>
+							<h3 class="anasayfa-haberler-alt-baslik">Swipe Pong</h3>
+							<span class="anasayfa-haberler-aciklama">BRK Software</span>
+						</div>
+					</div>
+
+					<span class="anasayfa-haberler-alt-bilgiler">
+						<span class="anasayfa-haberler-hedeftutar">
+							90.000<i class="fa fa-try fs-20"></i> Hedef Fon
+						</span>
+
+						<span class="anasayfa-haberler-tarih">
+							<i class="fa fa-clock-o fs-20"></i> 5 Gün kaldı
+						</span>
+					</span>
+				</a>
+			</div>
+		</div>
+		<div class="col-12 col-sm-6 col-md-3 col-lg-3">
+			<div class="anasayfa-haberler">
+				<a href="#" class="link-sinifi">
+					<img class="anasayfa-haberler-fotograf" src="~/img/proje-foto-2.jpg">
+
+					<div class="tutar-bar-container">
+						<div class="tutar-bar" style="width: 30%;"></div>
+					</div>
+					<div class="anasayfa-haberler-bilgi">
+						<img class="yuvarlak-image" src="~/img/proje-foto-2.jpg"> <!-- Yuvarlak resim firma avatar logo vs için -->
+						<div>
+							<h3 class="anasayfa-haberler-alt-baslik">Sons Of The Forest</h3>
+							<span class="anasayfa-haberler-aciklama">Ubisoft</span>
+						</div>
+					</div>
+					<span class="anasayfa-haberler-alt-bilgiler">
+						<span class="anasayfa-haberler-hedeftutar">
+							1.000.000<i class="fa fa-try fs-20"></i> Hedef Fon
+						</span>
+
+						<span class="anasayfa-haberler-tarih">
+							<i class="fa fa-clock-o fs-20"></i> 10 Gün kaldı
+						</span>
+					</span>
+				</a>
+			</div>
+		</div>
+		<div class="col-12 col-sm-6 col-md-3 col-lg-3">
+			<div class="anasayfa-haberler">
+				<a href="#" class="link-sinifi">
+					<img class="anasayfa-haberler-fotograf" src="~/img/proje-foto-3.jpg">
+
+					<div class="tutar-bar-container">
+						<div class="tutar-bar" style="width: 80%;"></div>
+					</div>
+					<div class="anasayfa-haberler-bilgi">
+						<img class="yuvarlak-image" src="~/img/proje-foto-3.jpg"> <!-- Yuvarlak resim firma avatar logo vs için -->
+						<div>
+							<h3 class="anasayfa-haberler-alt-baslik">Sea Of Thieves </h3>
+							<span class="anasayfa-haberler-aciklama">King Soft</span>
+						</div>
+					</div>
+					<span class="anasayfa-haberler-alt-bilgiler">
+						<span class="anasayfa-haberler-hedeftutar">
+							900.000<i class="fa fa-try fs-20"></i> Hedef Fon
+						</span>
+
+						<span class="anasayfa-haberler-tarih">
+							<i class="fa fa-clock-o fs-20"></i> 15 Gün kaldı
+						</span>
+					</span>
+				</a>
+			</div>
+		</div>
+		<div class="col-12 col-sm-6 col-md-3 col-lg-3">
+			<div class="anasayfa-haberler">
+				<a href="#" class="link-sinifi">
+					<img class="anasayfa-haberler-fotograf" src="~/img/proje-foto-4.jpg">
+
+					<div class="tutar-bar-container">
+						<div class="tutar-bar" style="width: 50%;"></div>
+					</div>
+					<div class="anasayfa-haberler-bilgi">
+						<img class="yuvarlak-image" src="~/img/proje-foto-3.jpg"> <!-- Yuvarlak resim firma avatar logo vs için -->
+						<div>
+							<h3 class="anasayfa-haberler-alt-baslik">Valheim</h3>
+							<span class="anasayfa-haberler-aciklama">KS Entertainment</span>
+						</div>
+					</div>
+					<span class="anasayfa-haberler-alt-bilgiler">
+						<span class="anasayfa-haberler-hedeftutar">
+							150.000<i class="fa fa-try fs-20"></i> Hedef Fon
+						</span>
+
+						<span class="anasayfa-haberler-tarih">
+							<i class="fa fa-clock-o fs-20"></i> 25 Gün kaldı
+						</span>
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="container">
+	@if (pager.TotalPages > 0)
+	{
+		<ul class="pagination justify-content-end mb-5">
+			@for (var pge = pager.StartPage; pge <= pager.EndPage; pge++)
+			{
+				<li class="page-item @(pge == pager.CurrentPage ? "active" : "")">
+					<a class="page-link" asp-controller="Duyuru" asp-action="Index" asp-route-pg="@pge"> @pge </a>
+				</li>
+			}
+		</ul>
+	}
+</div>

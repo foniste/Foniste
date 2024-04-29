@@ -1,8 +1,10 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using FonApi.Interfaces;
 using FonApi.Models.Accounts;
 using FonApi.Service;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
@@ -15,16 +17,18 @@ namespace FonApi.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class AccountController : ControllerBase {
+    public class AccountController : ControllerBase 
+    {
         private readonly IConfiguration _configuration;
 
         //Error Messages 
         private const string newUserIsNullException = "An error occurred while trying to register. Please try again.";
         //
         private readonly AccountDbService _accountDbService;
+		private object _userManager;
 
-        //Constructor
-        public AccountController(AccountDbService accountDbService, IConfiguration configuration){
+		//Constructor
+		public AccountController(AccountDbService accountDbService, IConfiguration configuration){
             _accountDbService = accountDbService ?? throw new ArgumentNullException(nameof(accountDbService));
             _configuration = configuration;
         }
@@ -76,34 +80,103 @@ namespace FonApi.Controllers
                 return "An error occured : \n" + ex.Message;
             }
         }
-        // ! Email bazlı user varmı yok mu kontrol sonu //
+        //! Email bazlı user varmı yok mu kontrol sonu 
 
-        // * KAYIT EKRANI METODLARI SONU //
+        //* KAYIT EKRANI METODLARI SONU 
 
 
-        // * GİRİŞ EKRANI METODLARI BAŞLANGICI //
-        // ! Email ve Şifre Kullanarak Login Methodu Başlangıcı //
+        //* GİRİŞ EKRANI METODLARI BAŞLANGICI 
+        //! Email ve Şifre Kullanarak Login Methodu Başlangıcı 
+
+
+
         [HttpPost("/current/user")]
-        public async Task<IActionResult> LoginByEmailPassword([FromBody] UserAuth currentUserAuth){
+        public async Task<IActionResult> LoginByEmailPassword([FromBody] UserAuth currentUserAuth)
+        {
             var control = _accountDbService.Login( //Bu methodda email ve şifre parametreleri bazlı kontrol yapılıyor 
                 currentUserAuth.Email,
                 _accountDbService.HashSHA256(currentUserAuth.Password)
             );
-
-            if(!control){
+            if (!control)
+            {
                 return Ok("Kullanıcı id si alınamadı");
             }
-            else{
+            else
+            {
                 var temp = _accountDbService.GetUserIdByEmail(
                 currentUserAuth.Email,
                 _accountDbService.HashSHA256(currentUserAuth.Password)
                 );
-                if(temp == 0){
+                if (temp == 0)
+                {
                     return Ok("Id alınırken bir sorun oluştu.");
                 }
                 return Ok("Giriş Başarılı \n" + "Kullanıcı id si :" + temp + GenerateJwtToken(currentUserAuth.Email));
             }
         }
+
+
+        //************************  deneme  ***  login  *****************
+
+        public interface IUserService
+        {
+            Task<UserAuth> Authenticate(string username, string password);
+        }
+
+        public class UserService : IUserService
+        {
+            private readonly List<UserAuth> _users = new List<UserAuth>
+    {
+        new UserAuth { UserId = 1, Email = "user1", Password = "hashedPassword1" },
+        new UserAuth { UserId = 2, Email = "user2", Password = "hashedPassword2" }
+    };
+
+            public async Task<UserAuth> Authenticate(string username, string password)
+            {
+                var user = await Task.Run(() => _users.SingleOrDefault(u => u.Email == username && u.Password == HashPassword(password)));
+                return user;
+            }
+
+            private string HashPassword(string password)
+            {
+                // Bu metodu gerçek bir hashleme algoritmasıyla değiştirmelisiniz (örneğin, bcrypt, PBKDF2, Argon2)
+                return password; // Örnek amaçlı doğrudan şifreyi geri döndürüyoruz
+            }
+        }
+
+
+
+
+        [ApiController]
+        [Route("api/auth")]
+        public class AuthController : ControllerBase
+        {
+            private readonly IUserService _userService;
+            private readonly IJwtService _jwtService;
+
+            public AuthController(IUserService userService, IJwtService jwtService)
+            {
+                _userService = userService;
+                _jwtService = jwtService;
+            }
+
+            [HttpPost("login")]
+            public async Task<IActionResult> Login(UserAuth model)
+            {
+                var user = await _userService.Authenticate(model.Email, model.Password);
+                if (user == null)
+                {
+                    return Unauthorized("Invalid username or password");
+                }
+
+                var token = _jwtService.GenerateToken(user);
+                return Ok(new { Token = token });
+            }
+        }
+
+        //********************deneme sonu*******************************************
+
+
 
 
         private string GenerateJwtToken(string email)
