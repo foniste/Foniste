@@ -1,5 +1,4 @@
-﻿using FonApi.Models.Exception;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FonApi.Models.Accounts{
@@ -18,7 +17,10 @@ namespace FonApi.Models.Accounts{
         public string? Password { get; set; }
 
         [Column("role_id")]
-        public int? RoleId { get; set; }
+        public int RoleId { get; set; }
+
+        [Column("org_id")]
+        public int OrgId { get; set; }
 
         [Column("creation_date")]
         public DateTime? CreationDate { get; set; }

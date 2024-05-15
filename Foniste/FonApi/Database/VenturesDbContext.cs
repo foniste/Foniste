@@ -1,5 +1,4 @@
-﻿using FonApi.Models.Exception;
-using FonApi.Models.Ventures;
+﻿using FonApi.Models.Ventures;
 using Microsoft.EntityFrameworkCore;
 
 namespace FonApi.Database
@@ -9,10 +8,7 @@ namespace FonApi.Database
         public VenturesDbContext(DbContextOptions<VenturesDbContext> options) : base(options) {
         }
         // Ventures Schema
-        public DbSet<VenturesDetail> venturesdetails { get; set; }
-        public DbSet<VenturesHeader> venturesheader { get; set; }
-        public DbSet<VenturesImg> venturesimg { get; set; }
-        public DbSet<ExceptionLog> exceptionlog{ get; set; }
+        public DbSet<VenturesAll> ventures_all { get; set;}
         //
     }
 }

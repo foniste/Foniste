@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Foniste")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1484b81660ef59b878004961a5f1d631be3c129")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80dc8e3d79d9f03741ad68dcd1658eeb44532caf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Foniste")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Foniste")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
