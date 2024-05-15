@@ -60,7 +60,7 @@
   {
     "ContainingType": "FonApi.Controllers.VentureController",
     "Method": "GetAllVentureDetails",
-    "RelativePath": "Venture/ventures/all/details",
+    "RelativePath": "Venture/all/details",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -70,11 +70,27 @@
   {
     "ContainingType": "FonApi.Controllers.VentureController",
     "Method": "GetAllVentureImg",
-    "RelativePath": "Venture/ventures/all/img",
+    "RelativePath": "Venture/all/img",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FonApi.Controllers.VentureController",
+    "Method": "CreateNewVentures",
+    "RelativePath": "Venture/new/venture",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postRequest",
+        "Type": "FonApi.Models.Ventures.PostRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

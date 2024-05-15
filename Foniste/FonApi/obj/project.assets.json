@@ -1444,7 +1444,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Berk\\.nuget\\packages\\": {},
+    "C:\\Users\\melih\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -1453,14 +1453,14 @@
       "projectUniqueName": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\FonApi.csproj",
       "projectName": "FonApi",
       "projectPath": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\FonApi.csproj",
-      "packagesPath": "C:\\Users\\Berk\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\melih\\.nuget\\packages\\",
       "outputPath": "C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Berk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\melih\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1535,13 +1535,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\GitHubRepo\\Foniste\\Foniste\\FonApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

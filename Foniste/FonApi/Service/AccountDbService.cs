@@ -19,6 +19,7 @@ namespace FonApi.Service {
         // ?---------------------------------------------------------------------------------//
         // ?-----------------------------------USER DATA-------------------------------------//
         // ?---------------------------------------------------------------------------------//
+
         // Tüm Kullanıcıları getiren method
         public async Task<List<Users>> GetAllUsers(){
             return await _accountsDbContext.users.ToListAsync();
@@ -36,16 +37,16 @@ namespace FonApi.Service {
         // ?---------------------------------------------------------------------------------//
 
         // Tüm kullancıların auth datasını getiren method
-        public int GetUserIdByEmail(string email,string password){
+        public int GetOrgIdByEmail(string email,string password){
             try {
                 int holder = _accountsDbContext.user_auth
                 .Where(user => user.Email == email)
-                .Select(user => user.UserId).FirstOrDefault();
+                .Select(user => user.OrgId).FirstOrDefault();
 
                 if(holder == null){
                     return 0;
                 }
-                
+
                 return holder;
             }
             catch (System.Exception) {

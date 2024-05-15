@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5rldGPT9KP3dzReA9xggzETT6xvUEZRnxtkOwaCWZhmsK5+z1XQ0JOwgYLsv1gS5mPJEEYZ4smyA1FlIqX6avQ==",
+  "dgSpecHash": "xznqdQOuOsyP1LGziVyS4gy8/kPeN0rRYSJcvqf5IW1BME7bFRwmPtLV/iWdxMuqOG3TR0JPJ+L1EcN5V/2+qg==",
   "success": true,
   "projectFilePath": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\Foniste.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

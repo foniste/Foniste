@@ -1,10 +1,8 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using FonApi.Interfaces;
 using FonApi.Models.Accounts;
 using FonApi.Service;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
@@ -17,7 +15,7 @@ namespace FonApi.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class AccountController : ControllerBase 
+    public class AccountController : ControllerBase
     {
         private readonly IConfiguration _configuration;
 
@@ -25,24 +23,29 @@ namespace FonApi.Controllers
         private const string newUserIsNullException = "An error occurred while trying to register. Please try again.";
         //
         private readonly AccountDbService _accountDbService;
-		private object _userManager;
+        private object _userManager;
 
-		//Constructor
-		public AccountController(AccountDbService accountDbService, IConfiguration configuration){
+        //Constructor
+        public AccountController(AccountDbService accountDbService, IConfiguration configuration)
+        {
             _accountDbService = accountDbService ?? throw new ArgumentNullException(nameof(accountDbService));
             _configuration = configuration;
         }
         //
 
         //* KAYIT EKRANI METODLARI BAŞLANGICI //
+
         // ! Kayıt olma ekranı için method başlangıcı //
         [HttpPost("/new/usr")]
-        public async Task<IActionResult> CreateNewUser([FromBody] UserAuth newUser) {
-            if(newUser == null) {
+        public async Task<IActionResult> CreateNewUser([FromBody] UserAuth newUser)
+        {
+            if (newUser == null)
+            {
                 return BadRequest(newUserIsNullException);
             }
 
-            UserAuth template = new UserAuth{
+            UserAuth template = new UserAuth
+            {
                 Email = newUser.Email,
                 Password = newUser.Password,
                 RoleId = 0,
@@ -50,7 +53,8 @@ namespace FonApi.Controllers
             };
 
             var result = await CheckUserByEmail(newUser.Email);
-            switch (result){
+            switch (result)
+            {
                 case "Available": //Insert atabilmek için şart sağlandı
                     _accountDbService.InsertNewUser(template); //yeni bir kullanıcı insert edildi
                     return Ok("Hesap Oluşturuldu");
@@ -66,17 +70,21 @@ namespace FonApi.Controllers
 
         // ! Email bazlı user varmı yok mu kontrolü //
         [HttpGet("isExists/{email?}")]
-        public async Task<string> CheckUserByEmail([FromRoute] string email){
-            
-            try {
+        public async Task<string> CheckUserByEmail([FromRoute] string email)
+        {
+
+            try
+            {
                 bool control = _accountDbService.IsExistsInUserDb(email);
-                if(!control == true) {
+                if (!control == true)
+                {
                     return "Available"; // hesap oluşturulabilir 
                 }
-                
+
                 return "Unavailable"; // hesap oluşturulamaz
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 return "An error occured : \n" + ex.Message;
             }
         }
@@ -86,9 +94,8 @@ namespace FonApi.Controllers
 
 
         //* GİRİŞ EKRANI METODLARI BAŞLANGICI 
+
         //! Email ve Şifre Kullanarak Login Methodu Başlangıcı 
-
-
 
         [HttpPost("/current/user")]
         public async Task<IActionResult> LoginByEmailPassword([FromBody] UserAuth currentUserAuth)
@@ -103,18 +110,17 @@ namespace FonApi.Controllers
             }
             else
             {
-                var temp = _accountDbService.GetUserIdByEmail(
-                currentUserAuth.Email,
-                _accountDbService.HashSHA256(currentUserAuth.Password)
-                );
+                var temp = _accountDbService.GetOrgIdByEmail(
+                            currentUserAuth.Email,
+                            _accountDbService.HashSHA256(currentUserAuth.Password)
+                            );
                 if (temp == 0)
                 {
                     return Ok("Id alınırken bir sorun oluştu.");
                 }
-                return Ok("Giriş Başarılı \n" + "Kullanıcı id si :" + temp + GenerateJwtToken(currentUserAuth.Email));
+                return Ok(temp);
             }
         }
-
 
         //************************  deneme  ***  login  *****************
 
@@ -146,7 +152,7 @@ namespace FonApi.Controllers
 
 
 
-
+        /*
         [ApiController]
         [Route("api/auth")]
         public class AuthController : ControllerBase
@@ -176,7 +182,7 @@ namespace FonApi.Controllers
 
         //********************deneme sonu*******************************************
 
-
+*/
 
 
         private string GenerateJwtToken(string email)
