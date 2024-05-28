@@ -19,8 +19,6 @@ namespace FonApi.Controllers
     {
         private readonly IConfiguration _configuration;
 
-        //Error Messages 
-        private const string newUserIsNullException = "An error occurred while trying to register. Please try again.";
         //
         private readonly AccountDbService _accountDbService;
         private object _userManager;
@@ -33,7 +31,7 @@ namespace FonApi.Controllers
         }
         //
 
-        //* KAYIT EKRANI METODLARI BAŞLANGICI //
+        //* KAYIT EKRANI METODLARI BAŞLANGICI
 
         // ! Kayıt olma ekranı için method başlangıcı //
         [HttpPost("/new/usr")]
@@ -41,7 +39,7 @@ namespace FonApi.Controllers
         {
             if (newUser == null)
             {
-                return BadRequest(newUserIsNullException);
+                return BadRequest();
             }
 
             UserAuth template = new UserAuth
@@ -66,7 +64,6 @@ namespace FonApi.Controllers
 
         }
         // ! Kayıt olma ekranı için method sonu //
-
 
         // ! Email bazlı user varmı yok mu kontrolü //
         [HttpGet("isExists/{email?}")]
@@ -93,11 +90,11 @@ namespace FonApi.Controllers
         //* KAYIT EKRANI METODLARI SONU 
 
 
-        //* GİRİŞ EKRANI METODLARI BAŞLANGICI 
+        //* GİRİŞ EKRANI METODLARI BAŞLANGICI   
 
         //! Email ve Şifre Kullanarak Login Methodu Başlangıcı 
 
-        [HttpPost("/current/user")]
+        [HttpPost("current/user")]
         public async Task<IActionResult> LoginByEmailPassword([FromBody] UserAuth currentUserAuth)
         {
             var control = _accountDbService.Login( //Bu methodda email ve şifre parametreleri bazlı kontrol yapılıyor 
@@ -121,13 +118,33 @@ namespace FonApi.Controllers
                 return Ok(temp);
             }
         }
+        // * GİRİŞ EKRANI METODLARI SONU //
 
+
+        [HttpPost("/profile/organization/{organization_id?}")]
+        public async Task<IActionResult> EditOrganization(int organization_id,[FromBody] Organizations organization)
+        {
+            Organizations tmp = new Organizations 
+            {
+                OrgId = organization_id,
+                OrganizationName = organization.OrganizationName,
+                Address = organization.Address,
+                IBAN = organization.IBAN,
+                PhoneNumber1 = organization.PhoneNumber1,
+                PhoneNumber2 = organization.PhoneNumber2,
+                PhoneNumber3 = organization.PhoneNumber3
+            };
+
+            _accountDbService.AddOrUpdateOrganizationAsync(tmp);
+            return Ok();
+            
+        }
         //************************  deneme  ***  login  *****************
 
         public interface IUserService
         {
             Task<UserAuth> Authenticate(string username, string password);
-        }
+        } 
 
         public class UserService : IUserService
         {
@@ -210,6 +227,6 @@ namespace FonApi.Controllers
         }
         // ! Email ve Şifre Kullanarak Login Methodu Son //
 
-        // * GİRİŞ EKRANI METODLARI SONU //
+       
     }
 }
