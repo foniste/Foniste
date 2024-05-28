@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iB9zTQTomP+HeXRcwnSB21Fr/7d1f92xQTaujZmKH8I=",
+  "Hash": "lMpb3XPJWZe9zBoz6+aVXKxY203MkhFELKfm0vtgy6A=",
   "Source": "Foniste",
   "BasePath": "_content/Foniste",
   "Mode": "Default",
@@ -300,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\google-play.png"
+    },
+    {
+      "Identity": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\hakkimizda.jpg",
+      "SourceId": "Foniste",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\",
+      "BasePath": "_content/Foniste",
+      "RelativePath": "img/hakkimizda.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\hakkimizda.jpg"
     },
     {
       "Identity": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\img\\logo.png",

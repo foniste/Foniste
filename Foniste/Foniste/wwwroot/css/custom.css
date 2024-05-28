@@ -803,7 +803,7 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 
 
 /*************************************** DÜSTATİSTİK - END ***************************************/
-/****************************************Tanıtım***************************************************/
+/****************************************TANITIM BAŞLANGIÇ***************************************************/
 
 .tanıtım-img {
     position: absolute;
@@ -826,7 +826,7 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 
 
 /****************************************Tanıtım***************************************************/
-/*************************************** DU-YARDIM ***************************************/
+/*************************************** YARDIM ***************************************/
 .du-yardim {
     height: 200px;
     background-color: var(--footerKusakRengi);
@@ -869,7 +869,52 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
         font-weight: bold;
     }
 
-/*************************************** DU-YARDIM - END ***************************************/
+/*************************************** YARDIM - END ***************************************/
+
+/*************************************** HAKKIMIZDA - BAŞLANGIÇ *****************************/
+
+#hakkimizda .section-title h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+#hakkimizda .hakkimizda-img {
+    width: 100%;
+    max-width: 600px; /* Görselin maksimum genişliğini belirler */
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px; /* Kenarları yuvarlak yapar */
+    margin: 0 auto; /* Ortalar */
+}
+#hakkimizda .hakkimizda-icon-kutu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+#hakkimizda h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#hakkimizda p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/*************************************** HAKKIMIZDA - SONU *****************************/
 
 /*************************************** FOOTER ***************************************/
 
@@ -1310,8 +1355,6 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 
 
 /*************************************** MEDYA SORGULARI ***************************************/
-
-
 /*
 bootstrap responsive sistemine göre ekran genişliği 992px ve üstü cihazlar large cihaz olarak kabul edilir.
 yani bu genişliğin altında kalan cihazlar tabletler ve telefonlardır.

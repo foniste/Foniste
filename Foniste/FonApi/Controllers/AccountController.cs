@@ -93,90 +93,43 @@ namespace FonApi.Controllers
         [HttpPost("/current/user")]
         public async Task<IActionResult> LoginByEmailPassword([FromBody] UserAuth currentUserAuth)
         {
-            var control = _accountDbService.Login( //Bu methodda email ve şifre parametreleri bazlı kontrol yapılıyor 
-                currentUserAuth.Email,
-                _accountDbService.HashSHA256(currentUserAuth.Password)
+            // Kullanıcının veritabanında doğrulama kontrolü yapılır
+            var control = _accountDbService.Login(
+                currentUserAuth.Email, currentUserAuth.Password
+            //_accountDbService.HashSHA256(currentUserAuth.Password)
             );
+
+            // Eğer kullanıcı doğrulanamazsa
             if (!control)
             {
+                // Başarısız durumda "Kullanıcı id si alınamadı" mesajı ile birlikte OK (200) döndürülür
                 return Ok("Kullanıcı id si alınamadı");
             }
             else
             {
+                // Kullanıcı doğrulanırsa, kullanıcının kimliği alınır
                 var temp = _accountDbService.GetUserIdByEmail(
-                currentUserAuth.Email,
-                _accountDbService.HashSHA256(currentUserAuth.Password)
+                    currentUserAuth.Email, 
+                    currentUserAuth.Password
+                    //_accountDbService.HashSHA256(currentUserAuth.Password)
                 );
+
+                // Eğer kullanıcı kimliği alınamazsa
                 if (temp == 0)
                 {
+                    // Başarısız durumda "Id alınırken bir sorun oluştu." mesajı ile birlikte OK (200) döndürülür
                     return Ok("Id alınırken bir sorun oluştu.");
                 }
-                return Ok("Giriş Başarılı \n" + "Kullanıcı id si :" + temp + GenerateJwtToken(currentUserAuth.Email));
-            }
-        }
-
-
-        //************************  deneme  ***  login  *****************
-
-        public interface IUserService
-        {
-            Task<UserAuth> Authenticate(string username, string password);
-        }
-
-        public class UserService : IUserService
-        {
-            private readonly List<UserAuth> _users = new List<UserAuth>
-    {
-        new UserAuth { UserId = 1, Email = "user1", Password = "hashedPassword1" },
-        new UserAuth { UserId = 2, Email = "user2", Password = "hashedPassword2" }
-    };
-
-            public async Task<UserAuth> Authenticate(string username, string password)
-            {
-                var user = await Task.Run(() => _users.SingleOrDefault(u => u.Email == username && u.Password == HashPassword(password)));
-                return user;
-            }
-
-            private string HashPassword(string password)
-            {
-                // Bu metodu gerçek bir hashleme algoritmasıyla değiştirmelisiniz (örneğin, bcrypt, PBKDF2, Argon2)
-                return password; // Örnek amaçlı doğrudan şifreyi geri döndürüyoruz
-            }
-        }
-
-
-
-
-        [ApiController]
-        [Route("api/auth")]
-        public class AuthController : ControllerBase
-        {
-            private readonly IUserService _userService;
-            private readonly IJwtService _jwtService;
-
-            public AuthController(IUserService userService, IJwtService jwtService)
-            {
-                _userService = userService;
-                _jwtService = jwtService;
-            }
-
-            [HttpPost("login")]
-            public async Task<IActionResult> Login(UserAuth model)
-            {
-                var user = await _userService.Authenticate(model.Email, model.Password);
-                if (user == null)
+                else
                 {
-                    return Unauthorized("Invalid username or password");
+                    // Kullanıcı kimliği başarılı şekilde alınırsa, başarılı giriş mesajı ve JWT token ile birlikte OK (200) döndürülür
+                    //return Ok("Giriş Başarılı \n" + "Kullanıcı id si :" + temp/* + GenerateJwtToken(currentUserAuth.Email)*/);
+                    // Giriş başarılı ise kullanıcı adını yanıta ekle
+                    var user = _accountDbService.GetUserByEmail(currentUserAuth.Email);
+                    return Ok(new { UserId = temp, Username = user.Email });
                 }
-
-                var token = _jwtService.GenerateToken(user);
-                return Ok(new { Token = token });
             }
         }
-
-        //********************deneme sonu*******************************************
-
-
 
 
         private string GenerateJwtToken(string email)

@@ -52,6 +52,16 @@ namespace FonApi.Service {
                 throw;
             }
         }
+
+        public UserAuth GetUserByEmail(string email)
+        {
+            // Veritabanından kullanıcıyı e-posta adresine göre al
+            return _accountsDbContext.user_auth.FirstOrDefault(u => u.Email == email);
+        }
+
+
+
+
         //
 
         //Kayıt olurken aynı email ile kaydedilmiş bir user var mı kontrolü yapan method
@@ -90,22 +100,23 @@ namespace FonApi.Service {
             }
             return true;
         }
-        //
+        
 
-        //Sha-256 şifreleme metodu
+       // Sha-256 şifreleme metodu
         public string HashSHA256(string input)
         {
             SHA256 sha256 = SHA256.Create();
-            
+
             byte[] inputBytes = Encoding.UTF8.GetBytes(input);
             byte[] hashBytes = sha256.ComputeHash(inputBytes);
             StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 0; i < hashBytes.Length; i++) {
+            for (int i = 0; i < hashBytes.Length; i++)
+            {
                 stringBuilder.Append(hashBytes[i].ToString("x2"));
             }
             return stringBuilder.ToString();
         }
-        //
+
 
         // ?---------------------------------------------------------------------------------//
         // ?---------------------------------------------------------------------------------//

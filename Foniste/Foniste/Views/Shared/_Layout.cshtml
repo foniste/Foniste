@@ -37,9 +37,18 @@
 				</div>
 				<div class="col-12 col-sm-9 col-md-9 col-lg-9 master-navbar d-none d-md-block">
 					<ul>
-						
-						<li> <a href="Signin" class="navbar-buton-kayıtol">KAYIT OL</a> </li>
-						<li> <a href="Login" class="navbar-buton-girisyap">GİRİŞ YAP</a> </li>
+						@if (User.Identity.IsAuthenticated)
+						{
+							<ul>
+								<li><a href="#">Profil</a></li>
+								<li><a href="/Logout">Çıkış</a></li>
+							</ul>
+						}
+						else
+						{
+							<li> <a href="Signin" class="navbar-buton-kayıtol">KAYIT OL</a> </li>
+							<li> <a href="Login" class="navbar-buton-girisyap">GİRİŞ YAP</a> </li>
+						}
 						<li> <a id="hizli-erisim" href="javascript:void(0);">KEŞFET<i class=" fa fa-angle-down"></i></a></li>
 						<li> <a href="javascript:void(0);">STARTUPLAR</a> </li>
 					</ul>
@@ -55,9 +64,9 @@
 							<ul>
 								<li> <a href="#"> STARTUPLAR </a> </li>
 								<li> <a href="#"> PROJELER </a> </li>
-								<li> <a href="#"> GİRİŞ YAP </a> </li>
-								<li> <a href="#"> KAYIT OL </a> </li>
-								<li> <a href="#"> HAKKIMIZDA </a> </li>
+								<li> <a href="Login"> GİRİŞ YAP </a> </li>
+								<li> <a href="Signin"> KAYIT OL </a> </li>
+								<li> <a href="Aboutus"> HAKKIMIZDA </a> </li>
 								<li> <a href="#"> İLETİŞİM </a> </li>
 								<li> <a href="#"> MİSYONUMUZ </a> </li>
 								<li> <a href="#"> VİZYONUMUZ </a> </li>
@@ -80,7 +89,7 @@
 						<div class="col-6 col-sm-6 col-md-6 col-lg-6">
 							<ul>
 								<li><a href="#">İLETİŞİM</a> </li>
-								<li><a href="#">HAKKIMIZDA</a> </li>
+								<li><a href="Aboutus">HAKKIMIZDA</a> </li>
 								<li><a href="#">MİSYONUMUZ</a> </li>
 								<li><a href="#">VİZYONUMUZ</a> </li>
 								<li><a href="#">EKİBİMİZ</a> </li>
@@ -167,7 +176,7 @@
 	<div id="basa-don"><a href="#"><i style="padding-right:0px;" class="fa fa-caret-up"></i></a> </div> <!-- inline css -->
 
 
-	<!-- düstatistik için -->
+	<!-- istatistik için -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.counterup.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>
