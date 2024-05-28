@@ -21,6 +21,7 @@ namespace FonApi.Database
         public string exceptionMessage = string.Empty;
         public string exceptionDetail = string.Empty;
 
+
         public int ControlDatabaseException()
         {
             try

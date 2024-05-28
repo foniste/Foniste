@@ -24,6 +24,7 @@ namespace FonApi.Service
                                  .Where(v => v.organization_id == organizationId)
                                  .ToListAsync();
         }
+
         public void InsertNewVenture(VenturesAll ventures_all)
         {
             _ventureDbContext.ventures_all.Add(ventures_all);

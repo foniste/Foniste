@@ -1,7 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using FonApi.Models.Exception;
-using Microsoft.EntityFrameworkCore;
 
 namespace FonApi.Models.Accounts{
     [Table("organization")]    
@@ -25,6 +23,10 @@ namespace FonApi.Models.Accounts{
         [Column("address")]
         [MaxLength(255)]
         public string? Address { get; set; }
+
+        [Column("iban_no")]
+        [MaxLength(32767)]
+        public string? IBAN { get; set; }
 
         [Column("organization_name")]
         [MaxLength(255)]

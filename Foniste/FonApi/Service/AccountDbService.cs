@@ -137,6 +137,58 @@ namespace FonApi.Service {
         public async Task<List<Organizations>> GetAllOrganization(){
             return await _accountsDbContext.organization.ToListAsync();
         }
+
+        public void InsertNewOrganization(Organizations org)
+        {
+            try
+            {
+                _accountsDbContext.organization.Add(org);
+                _accountsDbContext.SaveChanges();
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
+
+        public void AddOrUpdateOrganizationAsync(Organizations organization)
+        {
+            var existingOrganization = _accountsDbContext.organization
+                                                     .FirstOrDefault(o => o.OrgId == organization.OrgId);
+
+            if (existingOrganization == null)
+            {
+                // Kayıt yoksa yeni kayıt ekle
+                _accountsDbContext.organization.Add(organization);
+            }
+            else
+            {
+                // Yalnızca değişiklik olan alanları güncelle
+                if (existingOrganization.PhoneNumber1 != organization.PhoneNumber1)
+                    existingOrganization.PhoneNumber1 = organization.PhoneNumber1;
+
+                if (existingOrganization.PhoneNumber2 != organization.PhoneNumber2)
+                    existingOrganization.PhoneNumber2 = organization.PhoneNumber2;
+
+                if (existingOrganization.PhoneNumber3 != organization.PhoneNumber3)
+                    existingOrganization.PhoneNumber3 = organization.PhoneNumber3;
+
+                if (existingOrganization.Address != organization.Address)
+                    existingOrganization.Address = organization.Address;
+
+                if (existingOrganization.IBAN != organization.IBAN)
+                    existingOrganization.IBAN = organization.IBAN;
+
+                if (existingOrganization.OrganizationName != organization.OrganizationName)
+                    existingOrganization.OrganizationName = organization.OrganizationName;
+
+                // Değişiklikleri kaydet
+                _accountsDbContext.organization.Update(existingOrganization);
+            }
+
+            _accountsDbContext.SaveChanges();
+        }
+
         //
         // ?---------------------------------------------------------------------------------//
         // ?---------------------------------------------------------------------------------//
@@ -157,6 +209,14 @@ namespace FonApi.Service {
         // ?---------------------------------------------------------------------------------//
         // ?---------------------------------------------------------------------------------//
         // ?---------------------------------------------------------------------------------//
-        
+
+
+        // Veritabanındaki DML sorgularının değişikliklerinin sağlanması için api de yazdığın fonskiyona bunu ekle try bloğunda çalıştır.
+        public void Initialize()
+        {
+            _accountsDbContext.SaveChanges();
+        }
+        //
+
     }
 }
