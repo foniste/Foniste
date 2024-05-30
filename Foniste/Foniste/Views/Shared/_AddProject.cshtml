@@ -1,0 +1,44 @@
+﻿@model Foniste.Models.Ventures.VenturesAll
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Proje Ekle</title>
+    <link rel="stylesheet" href="~/css/addproject.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <form asp-action="AddProject" class="form" method="post" enctype="multipart/form-data">
+            <h2>Yeni Proje Ekle</h2>
+            <div class="form-group">
+                <label for="title">Proje Başlığı</label>
+                <input asp-for="venture_header" type="text" id="venture_header" name="venture_header" required>
+                <p class="help-text">Proje için anlamlı ve dikkat çekici bir başlık giriniz.</p>
+            </div>
+            <div class="form-group">
+                <label for="description">Proje Açıklaması</label>
+                <textarea asp-for="venture_description" id="venture_description" name="venture_description" rows="4" required></textarea>
+                <p class="help-text">Projeniz hakkında detaylı bilgi veriniz.</p>
+            </div>
+            <div class="form-group">
+                <label for="fundingAmount">İstenilen Fon Miktarı</label>
+                <input asp-for="fund_amount" type="number" id="fund_amount" name="fund_amount" required>
+                <p class="help-text">Proje için gereken toplam fon miktarını giriniz (TL cinsinden).</p>
+            </div>
+            <div class="form-group">
+                <label for="minFundingAmount">Minimum Verilebilecek Fon Miktarı</label>
+                <input asp-for="min_invest_value" type="number" id="min_invest_value" name="min_invest_value" required>
+                <p class="help-text">Bir kişinin verebileceği en düşük fon miktarını giriniz (TL cinsinden).</p>
+            </div>
+            <div class="form-group">
+                <label for="image">Proje Resmi</label>
+                <input asp-for="header_thumbnail" type="text" id="header_thumbnail" name="header_thumbnail">
+                <p class="help-text">Proje için bir resim yükleyiniz (JPEG, PNG formatında).</p>
+            </div>
+            <button type="submit">Proje Ekle</button>
+        </form>
+    </div>
+</body>
+</html>

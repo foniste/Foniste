@@ -1,0 +1,24 @@
+﻿.container-fluid {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.misyonumuz-img, .vizyonumuz-img, .hakkimizda-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.misyonumuz-icon-kutu, .vizyonumuz-icon-kutu, .hakkimizda-icon-kutu {
+    margin-bottom: 20px;
+}
+
+    .misyonumuz-icon-kutu i, .vizyonumuz-icon-kutu i, .hakkimizda-icon-kutu i {
+        font-size: 40px;
+        color: var(--efektRengiAcık);
+    }
