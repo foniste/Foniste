@@ -27,3 +27,6 @@ C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.pdb
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.genruntimeconfig.cache
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\ref\Foniste.dll
 C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.sourcelink.json
+C:\GitHubRepo\Foniste\Foniste\Foniste\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.csproj.AssemblyReference.cache
+C:\GitHubRepo\Foniste\Foniste\Foniste\obj\Release\net6.0\Foniste.csproj.Up2Date

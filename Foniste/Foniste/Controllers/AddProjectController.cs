@@ -26,7 +26,7 @@ namespace Foniste.Controllers
                     if (response.IsSuccessStatusCode)
                     {
                         string result = await response.Content.ReadAsStringAsync();
-                        return Ok(result);
+                        return RedirectToAction("Index","Project");
                     }
                     else
                     {

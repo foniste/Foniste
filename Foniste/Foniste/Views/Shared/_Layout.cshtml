@@ -37,29 +37,12 @@
 				</div>
 				<div class="col-12 col-sm-9 col-md-9 col-lg-9 master-navbar d-none d-md-block">
 					<ul>
-						@if (User.Identity.IsAuthenticated)
-						{
-							<li>
-								<a href="@Url.Action("Index", "Account")" class="navbar-buton-hesabim">HESABIM</a>
+						<li>
+								<a href="@Url.Action("Index", "Signin")" class="navbar-buton-kayıtol">KAYIT OL</a>
 							</li>
 							<li>
-								<span class="navbar-kullanici-adı">@User.Identity.Name</span>
+								<a href="@Url.Action("Index", "Login")" class="navbar-buton-girisyap">GİRİŞ YAP</a>
 							</li>
-							<li>
-								<form method="post" action="@Url.Action("Logout", "Account")" style="display:inline;">
-									<button type="submit" class="btn btn-link navbar-buton-cikis">ÇIKIŞ</button>
-								</form>
-							</li>
-						}
-						else
-						{
-							<li>
-								<a href="@Url.Action("Register", "Account")" class="navbar-buton-kayıtol">KAYIT OL</a>
-							</li>
-							<li>
-								<a href="@Url.Action("Login", "Account")" class="navbar-buton-girisyap">GİRİŞ YAP</a>
-							</li>
-						}
 						<li>
 							<a id="hizli-erisim" href="javascript:void(0);">KEŞFET<i class="fa fa-angle-down"></i></a>
 						</li>
@@ -105,8 +88,8 @@
 							<ul>
 								<li><a href="#">İLETİŞİM</a> </li>
 								<li><a href="#">HAKKIMIZDA</a> </li>
-								<li><a href="#">MİSYONUMUZ</a> </li>
-								<li><a href="#">VİZYONUMUZ</a> </li>
+								<li><a href="Mission">MİSYONUMUZ</a> </li>
+								<li><a href="Vısıon">VİZYONUMUZ</a> </li>
 								<li><a href="#">EKİBİMİZ</a> </li>
 							</ul>
 						</div>

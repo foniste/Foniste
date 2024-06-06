@@ -1,5 +1,4 @@
 ﻿using Foniste.Models.Accounts;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 
@@ -12,6 +11,7 @@ namespace Foniste.Controllers
 		{
 			return View();
 		}
+
 		public async Task<IActionResult> Signin(UserAuth newUser)
 		{
 			try
@@ -23,11 +23,11 @@ namespace Foniste.Controllers
 					client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
 					// Yeni kullanıcıyı API'ye gönder
-					HttpResponseMessage response = await client.PostAsJsonAsync("new/usr", newUser);
+					HttpResponseMessage response = await client.PostAsJsonAsync("/new/usr", newUser);
 					if (response.IsSuccessStatusCode)
 					{
 						string result = await response.Content.ReadAsStringAsync();
-						return Ok(result);
+						return RedirectToAction("Index","Home");
 					}
 					else
 					{

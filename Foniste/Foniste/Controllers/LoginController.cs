@@ -23,7 +23,10 @@ namespace Foniste.Controllers
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                     // Kullanıcı kimlik bilgilerini API'ye gönder
-                    HttpResponseMessage response = await client.PostAsJsonAsync("/login", userCredentials);
+
+                    
+
+                    HttpResponseMessage response = await client.PostAsJsonAsync("/current/user", userCredentials);
                     if (response.IsSuccessStatusCode)
                     {
                         // Giriş başarılıysa, API'den gelen yanıtı oku

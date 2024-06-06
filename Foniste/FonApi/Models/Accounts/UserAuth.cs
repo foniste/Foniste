@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FonApi.Models.Accounts{
+namespace FonApi.Models.Accounts
+{
     [Table("user_auth")]
-    public class UserAuth{
+    public class UserAuth
+    {
         [Key]
         [Column("user_id")]
         public int UserId { get; set; }
@@ -21,8 +23,5 @@ namespace FonApi.Models.Accounts{
 
         [Column("org_id")]
         public int OrgId { get; set; }
-
-        [Column("creation_date")]
-        public DateTime? CreationDate { get; set; }
     }
 }

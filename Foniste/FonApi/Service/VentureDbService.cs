@@ -25,6 +25,8 @@ namespace FonApi.Service
                                  .ToListAsync();
         }
 
+
+
         public void InsertNewVenture(VenturesAll ventures_all)
         {
             _ventureDbContext.ventures_all.Add(ventures_all);

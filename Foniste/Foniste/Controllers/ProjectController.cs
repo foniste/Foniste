@@ -1,83 +1,44 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Foniste.Models.Ventures;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Diagnostics;
+using System.Net.Http.Headers;
 
 namespace Foniste.Controllers
 {
     public class ProjectController : Controller
     {
-        // GET: ProjectController
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            // Modeli doldurun, örneğin bir API'den veri alın
+            List<VenturesAll> ventures = await GetVenturesFromApi();
+            return View(ventures);
         }
 
-        // GET: ProjectController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
-        // GET: ProjectController/Create
-        public ActionResult Create()
+        public async Task<List<VenturesAll>> GetVenturesFromApi()
         {
-            return View();
-        }
+            List<VenturesAll> ventures = new List<VenturesAll>();
 
-        // POST: ProjectController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
             try
             {
-                return RedirectToAction(nameof(Index));
+                using (var httpClient = new HttpClient())
+                {
+                    using (var response = await httpClient.GetAsync("https://localhost:7173/all/ventures"))
+                    {
+                        string apiResponse = await response.Content.ReadAsStringAsync();
+                        ventures = JsonConvert.DeserializeObject<List<VenturesAll>>(apiResponse);
+                    }
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                // Hata durumunda gerekli işlemleri yapabilirsiniz
+                Console.WriteLine("API'den veri alınırken hata oluştu: " + ex.Message);
             }
+
+            return ventures;
         }
 
-        // GET: ProjectController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: ProjectController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: ProjectController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: ProjectController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

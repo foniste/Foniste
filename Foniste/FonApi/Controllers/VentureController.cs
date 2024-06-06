@@ -58,6 +58,17 @@ namespace FonApi.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+		[HttpGet("/all/ventures")]
+		public async Task<IActionResult> GetAllVentures()
+		{
+            var holder = await _ventureDbService.GetAll();
+            if(holder == null)
+            {
+                return NotFound();
+            }
+            return Ok(holder);
             
         }
     }
