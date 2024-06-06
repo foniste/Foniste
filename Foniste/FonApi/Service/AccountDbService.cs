@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-using System.Text;
-using FonApi.Database;
+﻿using FonApi.Database;
 using FonApi.Interfaces;
 using FonApi.Models.Accounts;
 using Microsoft.EntityFrameworkCore;
@@ -41,7 +39,7 @@ namespace FonApi.Service {
             try {
                 int holder = _accountsDbContext.user_auth
                 .Where(user => user.Email == email)
-                .Select(user => user.OrgId).FirstOrDefault();
+                .Select(user => user.UserId).FirstOrDefault();
 
                 if(holder == null){
                     return 0;
@@ -90,21 +88,6 @@ namespace FonApi.Service {
                 return false;
             }
             return true;
-        }
-        //
-
-        //Sha-256 şifreleme metodu
-        public string HashSHA256(string input)
-        {
-            SHA256 sha256 = SHA256.Create();
-            
-            byte[] inputBytes = Encoding.UTF8.GetBytes(input);
-            byte[] hashBytes = sha256.ComputeHash(inputBytes);
-            StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 0; i < hashBytes.Length; i++) {
-                stringBuilder.Append(hashBytes[i].ToString("x2"));
-            }
-            return stringBuilder.ToString();
         }
         //
 

@@ -21,8 +21,5 @@ namespace FonApi.Models.Accounts{
 
         [Column("org_id")]
         public int OrgId { get; set; }
-
-        [Column("creation_date")]
-        public DateTime? CreationDate { get; set; }
     }
 }

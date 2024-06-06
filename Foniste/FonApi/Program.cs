@@ -27,7 +27,10 @@ builder.Services.AddScoped<AccountDbService>();
 builder.Services.AddScoped<VentureDbService>();
 //
 
+builder.Services.AddSingleton<EncryptionService>();
+
 //Swagger Configurations
+builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "FonIste Database API", Version = "v1.0" }); });
 builder.Services.AddCors();

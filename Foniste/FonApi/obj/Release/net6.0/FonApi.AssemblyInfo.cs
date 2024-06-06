@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FonApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cfb4c71bf0a24a5c27a7078711026721b68c2d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ef55a153c719d5d2e7d19dcc88a5a036ff6d786")]
 [assembly: System.Reflection.AssemblyProductAttribute("FonApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FonApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

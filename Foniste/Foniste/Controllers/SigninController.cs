@@ -1,5 +1,4 @@
 ﻿using Foniste.Models.Accounts;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 
@@ -12,7 +11,13 @@ namespace Foniste.Controllers
 		{
 			return View();
 		}
-		public async Task<IActionResult> Signin(UserAuth newUser)
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Signin(UserAuth newUser)
 		{
 			try
 			{
@@ -27,8 +32,15 @@ namespace Foniste.Controllers
 					if (response.IsSuccessStatusCode)
 					{
 						string result = await response.Content.ReadAsStringAsync();
-						return Ok(result);
-					}
+						if(result == "Hesap Oluşturuldu")
+						{
+							return BadRequest();
+						}
+
+                        string jwtToken = await response.Content.ReadAsStringAsync(); // Burada JWT token'ını nasıl alacağınıza bağlı olarak değişebilir
+                        HttpContext.Session.SetString("JWTToken", jwtToken);
+                        return RedirectToAction("Index", "Home");
+                    }
 					else
 					{
 						// API'den gelen hata mesajını al ve göster
