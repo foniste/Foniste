@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iB9zTQTomP+HeXRcwnSB21Fr/7d1f92xQTaujZmKH8I=",
+  "Hash": "lUIQx+DKHYjXIyxeXkp8H0BEiJYVZsfkeYvahNhZw6U=",
   "Source": "Foniste",
   "BasePath": "_content/Foniste",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\addproject.css",
+      "SourceId": "Foniste",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\",
+      "BasePath": "_content/Foniste",
+      "RelativePath": "css/addproject.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\addproject.css"
+    },
     {
       "Identity": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "Foniste",
@@ -72,6 +91,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\mission.css",
+      "SourceId": "Foniste",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\",
+      "BasePath": "_content/Foniste",
+      "RelativePath": "css/mission.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\mission.css"
+    },
+    {
+      "Identity": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\css\\vision.css",
+      "SourceId": "Foniste",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\",
+      "BasePath": "_content/Foniste",
+      "RelativePath": "css/vision.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\vision.css"
     },
     {
       "Identity": "C:\\GitHubRepo\\Foniste\\Foniste\\Foniste\\wwwroot\\favicon.ico",

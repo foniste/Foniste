@@ -34,26 +34,7 @@ builder.Services.AddCors();
 //
 
 
-var key = Encoding.UTF8.GetBytes(configuration["Jwt:Secret"]);
-            builder.Services.AddAuthentication(options => {
-                options.DefaultAuthenticateScheme = "JwtBearer";
-                options.DefaultChallengeScheme = "JwtBearer";
-            })
-            .AddJwtBearer("JwtBearer", jwtBearerOptions =>
-            {
-                jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = true,
-                    ValidIssuer = configuration["Jwt:Issuer"],
-                    ValidateAudience = true,
-                    ValidAudience = configuration["Jwt:Audience"],
-                    ValidateLifetime = true,
-                    ClockSkew = System.TimeSpan.FromMinutes(60),
-                    RequireExpirationTime = true,
-                };
-            });
+
 
 var app = builder.Build();
 

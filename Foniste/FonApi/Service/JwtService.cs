@@ -5,7 +5,7 @@ using FonApi.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 
 namespace FonApi.Service{
-    public class JwtService : IJwtService {
+    public class JwtService{
         private readonly string _secretKey;
         private readonly string _issuer;
 

@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\GitHubRepo\Foniste\Foniste\Foniste
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/GitHubRepo/Foniste/Foniste/Foniste/Views/AddProject/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkUHJvamVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,12 +34,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Mission/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzc2lvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Project/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Shared/_AddProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZGRQcm9qZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Shared/_Cards.cshtml]
@@ -52,6 +64,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Shared/_Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Shared/_Mission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NaXNzaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Shared/_Presantation.cshtml]
@@ -78,8 +94,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Shared/_Vısıon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WxLFzxLFvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Signin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHubRepo/Foniste/Foniste/Foniste/Views/Vısıon/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVsSxc8Sxb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/GitHubRepo/Foniste/Foniste/Foniste/Views/_ViewImports.cshtml]

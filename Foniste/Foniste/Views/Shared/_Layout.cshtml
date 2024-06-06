@@ -37,11 +37,35 @@
 				</div>
 				<div class="col-12 col-sm-9 col-md-9 col-lg-9 master-navbar d-none d-md-block">
 					<ul>
-						
-						<li> <a href="Signin" class="navbar-buton-kayıtol">KAYIT OL</a> </li>
-						<li> <a href="Login" class="navbar-buton-girisyap">GİRİŞ YAP</a> </li>
-						<li> <a id="hizli-erisim" href="javascript:void(0);">KEŞFET<i class=" fa fa-angle-down"></i></a></li>
-						<li> <a href="javascript:void(0);">STARTUPLAR</a> </li>
+						@if (User.Identity.IsAuthenticated)
+						{
+							<li>
+								<a href="@Url.Action("Index", "Account")" class="navbar-buton-hesabim">HESABIM</a>
+							</li>
+							<li>
+								<span class="navbar-kullanici-adı">@User.Identity.Name</span>
+							</li>
+							<li>
+								<form method="post" action="@Url.Action("Logout", "Account")" style="display:inline;">
+									<button type="submit" class="btn btn-link navbar-buton-cikis">ÇIKIŞ</button>
+								</form>
+							</li>
+						}
+						else
+						{
+							<li>
+								<a href="@Url.Action("Register", "Account")" class="navbar-buton-kayıtol">KAYIT OL</a>
+							</li>
+							<li>
+								<a href="@Url.Action("Login", "Account")" class="navbar-buton-girisyap">GİRİŞ YAP</a>
+							</li>
+						}
+						<li>
+							<a id="hizli-erisim" href="javascript:void(0);">KEŞFET<i class="fa fa-angle-down"></i></a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">STARTUPLAR</a>
+						</li>
 					</ul>
 				</div>
 				<div class="col-9 d-block d-md-none">
