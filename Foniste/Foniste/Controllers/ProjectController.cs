@@ -15,7 +15,15 @@ namespace Foniste.Controllers
             return View(ventures);
         }
 
-
+        public async Task<IActionResult> ProjectDetails(int id)
+        {
+            VenturesAll project = await GetProjectFromApi(id);
+            if (project == null)
+            {
+                return NotFound();
+            }
+            return View(project);
+        }
         public async Task<List<VenturesAll>> GetVenturesFromApi()
         {
             List<VenturesAll> ventures = new List<VenturesAll>();
@@ -39,6 +47,28 @@ namespace Foniste.Controllers
 
             return ventures;
         }
+        public async Task<VenturesAll> GetProjectFromApi(int id)
+        {
+            VenturesAll project = null;
 
+            try
+            {
+                using (var httpClient = new HttpClient())
+                {
+                    using (var response = await httpClient.GetAsync($"https://localhost:7173/venture/{id}"))
+                    {
+                        string apiResponse = await response.Content.ReadAsStringAsync();
+                        project = JsonConvert.DeserializeObject<VenturesAll>(apiResponse);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Hata durumunda gerekli işlemleri yapabilirsiniz
+                Console.WriteLine("API'den veri alınırken hata oluştu: " + ex.Message);
+            }
+
+            return project;
+        }
     }
 }

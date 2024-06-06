@@ -2,13 +2,12 @@
 @{
     ViewData["Title"] = "Index";
 }
-
 <div class="anasayfa-haberler-kapsayici" id="haberler" style="padding-bottom: 20px;">
     <h3 class="anasayfa-haberler-baslik">
         PROJELER
     </h3>
     <div class="anasayfa-duyurular-baslik-cizgi"></div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             @foreach (var project in Model)
             {
@@ -38,9 +37,12 @@
                                 </span>
                             </span>
                         </a>
+                        <button class="yatirim-yap-butonu">Yatırım Yap</button>
                     </div>
                 </div>
             }
+
         </div>
     </div>
 </div>
+<button class="projeler-buton"><a href="addproject">PROJE EKLE</a></button>

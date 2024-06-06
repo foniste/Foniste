@@ -1,22 +1,6 @@
 [
   {
     "ContainingType": "FonApi.Controllers.AccountController",
-    "Method": "LoginByEmailPassword",
-    "RelativePath": "Account/current/user",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "currentUserAuth",
-        "Type": "FonApi.Models.Accounts.UserAuth",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FonApi.Controllers.AccountController",
     "Method": "CheckUserByEmail",
     "RelativePath": "Account/isExists/{email}",
     "HttpMethod": "GET",
@@ -43,22 +27,6 @@
   },
   {
     "ContainingType": "FonApi.Controllers.AccountController",
-    "Method": "CreateNewUser",
-    "RelativePath": "Account/new/usr",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "newUser",
-        "Type": "FonApi.Models.Accounts.UserAuth",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FonApi.Controllers.AccountController",
     "Method": "EditOrganization",
     "RelativePath": "Account/profile/organization/{organization_id}",
     "HttpMethod": "POST",
@@ -80,6 +48,32 @@
   },
   {
     "ContainingType": "FonApi.Controllers.VentureController",
+    "Method": "GetAllVentures",
+    "RelativePath": "all/ventures",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FonApi.Controllers.AccountController",
+    "Method": "LoginByEmailPassword",
+    "RelativePath": "current/user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "currentUserAuth",
+        "Type": "FonApi.Models.Accounts.UserAuth",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FonApi.Controllers.VentureController",
     "Method": "GetVenturesByOrganizationId",
     "RelativePath": "myprofile/ventures/{organizationId}",
     "HttpMethod": "GET",
@@ -89,6 +83,22 @@
       {
         "Name": "organizationId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FonApi.Controllers.AccountController",
+    "Method": "CreateNewUser",
+    "RelativePath": "new/usr",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newUser",
+        "Type": "FonApi.Models.Accounts.UserAuth",
         "IsRequired": true
       }
     ],

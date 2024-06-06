@@ -619,12 +619,30 @@ ol.carousel-indicators { /*carousel indicator tasarımı özelleştirdim hangisl
 
 /*************************************** ANASAYFA - PROJELER - START ***************************************/
 
+.yatirim-yap-butonu {
+    display: block;
+    width: 100px; /* Yeni genişlik */
+    height: 30px; /* Yeni yükseklik */
+    margin: 0; /* Diğer marginları sıfırla */
+    margin-top: 10px;
+    margin-left: 15px; /* Sağa yasla */
+    padding: 2px;
+    border: solid 1px #fff;
+    background-color: var(--efektRengiAcık);
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+
+
 .anasayfa-haberler-kapsayici {
     /*padding-bottom:40px;*/
 }
 
 .anasayfa-haberler {
     /*padding-bottom:40px;*/
+    margin:10px;
+    padding-top:10px;
     display: flex;
     flex-direction: column;
     flex-basis: 300px;

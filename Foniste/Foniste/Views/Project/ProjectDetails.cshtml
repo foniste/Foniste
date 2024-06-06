@@ -1,0 +1,27 @@
+﻿@model Foniste.Models.Ventures.VenturesAll
+@{
+    ViewData["Title"] = "Proje Detayı";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>@Model.venture_header</h2>
+            <hr />
+            <div class="card">
+                <img class="card-img-top" src="@Model.header_thumbnail" alt="@Model.venture_header">
+                <div class="card-body">
+                    <h5 class="card-title">Proje Açıklaması</h5>
+                    <p class="card-text">@Model.venture_description</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Hedef Fon: @Model.target_fund TRY</li>
+                    <li class="list-group-item">Toplanan Fon: @Model.fund_amount TRY</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Bağış Yap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
