@@ -24,18 +24,13 @@
             </div>
             <div class="form-group">
                 <label for="fundingAmount">İstenilen Fon Miktarı</label>
-                <input asp-for="fund_amount" type="number" id="fund_amount" name="fund_amount" required>
+                <input asp-for="target_fund" type="number" id="target_fund" name="target_fund" required>
                 <p class="help-text">Proje için gereken toplam fon miktarını giriniz (TL cinsinden).</p>
             </div>
             <div class="form-group">
                 <label for="minFundingAmount">Minimum Verilebilecek Fon Miktarı</label>
                 <input asp-for="min_invest_value" type="number" id="min_invest_value" name="min_invest_value" required>
                 <p class="help-text">Bir kişinin verebileceği en düşük fon miktarını giriniz (TL cinsinden).</p>
-            </div>
-            <div class="form-group">
-                <label for="image">Proje Resmi</label>
-                <input asp-for="header_thumbnail" type="text" id="header_thumbnail" name="header_thumbnail">
-                <p class="help-text">Proje için bir resim yükleyiniz (JPEG, PNG formatında).</p>
             </div>
             <button type="submit">Proje Ekle</button>
         </form>

@@ -14,13 +14,13 @@
                 <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                     <div class="anasayfa-haberler">
                         <a href="@Url.Action("ProjectDetails", new { id = project.venture_id })" class="link-sinifi">
-                            <img class="anasayfa-haberler-fotograf" src="@project.header_thumbnail" alt="@project.venture_header">
+                           
 
                             <div class="tutar-bar-container">
                                 <div class="tutar-bar" style="width: @(project.fund_amount / project.target_fund * 100)%"></div>
                             </div>
                             <div class="anasayfa-haberler-bilgi">
-                                <img class="yuvarlak-image" src="@project.header_thumbnail" alt="@project.venture_header"> <!-- Yuvarlak resim firma avatar logo vs için -->
+                                 <!-- Yuvarlak resim firma avatar logo vs için -->
                                 <div>
                                     <h3 class="anasayfa-haberler-alt-baslik">@project.venture_header</h3>
                                     <span class="anasayfa-haberler-aciklama">@project.venture_description</span>
